@@ -1,0 +1,17 @@
+{
+  "skill_name": "social-media-creator-workflow-strategy-reviewer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "这是过去 20 条内容的标准化数据，按流量、人设、转化三类帮我复盘，并给下个月实验计划。",
+      "expected_output": "按使命分组陈述事实，提出带置信度和证据的分层诊断，输出单变量实验与7-30天动作。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我昨天发的一条视频数据差，直接告诉我是不是该换赛道。",
+      "expected_output": "不根据单条内容否定账号方向，说明观察窗口和需要的数据，优先给内容级诊断与测试。",
+      "files": []
+    }
+  ]
+}

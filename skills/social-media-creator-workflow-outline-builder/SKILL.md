@@ -6,22 +6,28 @@ description: |
 
 # Creator Outline Builder
 
-Own this job: Turn an accepted topic into a shootable and writable content outline with multiple opening options.
+把已确定选题转成可拍、可写的结构骨架，同时提供多个开头与标题方向。只解决
+内容结构，不提前代替场景设计或完整成稿。
 
 ## Context
 
-Read the current conversation and relevant files before asking for more input.
-Read `../../knowledge/skill-packs/outline-builder.md` when domain guidance is
-needed. Trace knowledge claims to IDs in `../../knowledge/sources.jsonl`.
+先读对话中的选题、用户、内容使命和可用素材，再完整读取
+`../../knowledge/skill-packs/outline-builder.md`。如果已有定选题结果，直接复用。
 
 ## Workflow
 
-1. Identify the user's intended result and the evidence already available.
-2. Apply the source-grounded method in the skill pack.
-3. Distinguish facts, user claims, and inference.
-4. Produce the smallest complete deliverable.
-5. State material gaps instead of fabricating evidence.
-6. Return control to the main router when the user asks what to do next.
+1. 用一句话写清核心表达和用户看完能得到什么。
+2. 根据内容使命选择主体结构，不用同一模板套所有选题。
+3. 同时生成至少四种不同机制的开头，并说明各自适合的语气。
+4. 安排事实、感受、案例和观点，检查每段是否推动核心表达。
+5. 为每个段落写明画面任务或素材需求，但不展开完整分镜。
+6. 根据收藏、评论、关注、转化或系列期待设计一个主要结尾动作。
+7. 检查标题/开头承诺是否能在正文结构中兑现。
+
+## Input gaps
+
+如果缺少时长，按用户平台和内容复杂度给出建议区间并标记假设；如果缺少素材，
+先用“需要的证据/案例”占位，不编造案例。
 
 ## Deliverables
 
@@ -30,7 +36,20 @@ needed. Trace knowledge claims to IDs in `../../knowledge/sources.jsonl`.
 - 结构提纲
 - 结尾动作
 
+固定输出顺序：
+
+1. 核心表达与内容使命；
+2. 4～6 个标题方向；
+3. 4～6 个不同机制的开头；
+4. 主体提纲表：段落任务、核心信息、证据/案例、画面任务、预计时长；
+5. 结尾动作；
+6. 承诺兑现检查与素材缺口。
+
 ## Boundaries
 
-TODO(source-grounding): Define domain-specific exclusions, decision rules, and
-output examples from the registered materials.
+- 不把“千万别划走”之类强迫话术作为默认开头。
+- 允许直接价值、好奇、反常识、矛盾和身份代入并存，不选唯一教条。
+- 不写无法由后文兑现的悬念。
+- 不把提纲扩写成完整稿，除非用户明确同时要求成稿；此时交回主路由选择
+  `content-writer`。
+- 不进入具体镜头、机位、道具和剪辑包装。

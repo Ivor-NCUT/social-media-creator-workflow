@@ -10,6 +10,8 @@ from pathlib import Path
 
 NAME_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 REQUIRED_ROOT = ("README.md", "AGENTS.md", "VERSION", "LICENSE", "project.json")
+TEXT_SUFFIXES = {".md", ".json", ".jsonl", ".py", ".yml", ".yaml"}
+SOURCE_GROUNDING_MARKER = "TODO" + "(source-grounding)"
 
 
 def validate_jsonl(path: Path, source_ids: set[str] | None = None) -> list[str]:
@@ -60,13 +62,28 @@ def validate_project(root: Path) -> list[str]:
 
     expected = [name] + [f"{name}-{item.get('id', '')}" for item in experts if isinstance(item, dict)]
     for skill_name in expected:
-        skill_file = root / "skills" / skill_name / "SKILL.md"
+        skill_root = root / "skills" / skill_name
+        skill_file = skill_root / "SKILL.md"
         if not skill_file.is_file():
             errors.append(f"missing skill: {skill_name}")
             continue
         text = skill_file.read_text(encoding="utf-8")
         if f"name: {skill_name}" not in text:
             errors.append(f"{skill_file}: frontmatter name mismatch")
+        eval_path = skill_root / "evals" / "evals.json"
+        if not eval_path.is_file():
+            errors.append(f"missing evals: {skill_name}")
+        else:
+            try:
+                eval_payload = json.loads(eval_path.read_text(encoding="utf-8"))
+            except json.JSONDecodeError as exc:
+                errors.append(f"{eval_path}: invalid JSON: {exc}")
+            else:
+                if eval_payload.get("skill_name") != skill_name:
+                    errors.append(f"{eval_path}: skill_name mismatch")
+                evals = eval_payload.get("evals")
+                if not isinstance(evals, list) or len(evals) < 2:
+                    errors.append(f"{eval_path}: expected at least two evals")
 
     source_path = root / "knowledge" / "sources.jsonl"
     errors.extend(validate_jsonl(source_path))
@@ -98,6 +115,20 @@ def validate_project(root: Path) -> list[str]:
     for relative in ("knowledge/glossary.md", "docs/architecture.md", "tools/validate_project.py"):
         if not (root / relative).is_file():
             errors.append(f"missing project component: {relative}")
+
+    version_path = root / "VERSION"
+    if version_path.is_file():
+        version = version_path.read_text(encoding="utf-8").strip()
+        if not re.fullmatch(r"\d+\.\d+\.\d+", version):
+            errors.append("VERSION must use semantic versioning")
+
+    for path in root.rglob("*"):
+        if not path.is_file() or ".git" in path.parts or "dist" in path.parts:
+            continue
+        if path.suffix not in TEXT_SUFFIXES:
+            continue
+        if SOURCE_GROUNDING_MARKER in path.read_text(encoding="utf-8"):
+            errors.append(f"{path}: unresolved source-grounding marker")
     return errors
 
 

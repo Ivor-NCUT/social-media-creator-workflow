@@ -1,7 +1,11 @@
 # Architecture
 
-`social-media-creator-workflow` is the stable main entry point. It routes one current
-task to one specialist:
+## 设计目标
+
+`social-media-creator-workflow` 是唯一稳定主入口。用户也可以直接点名专家，但
+不需要先学习完整目录。系统从当前对话判断工序，一次选择一个专家。
+
+## 专家地图
 
 - `social-media-creator-workflow-topic-selector`: Turn creator context, audience needs, platform signals, and content goals into prioritized topics.
 - `social-media-creator-workflow-outline-builder`: Turn an accepted topic into a shootable and writable content outline with multiple opening options.
@@ -16,6 +20,59 @@ task to one specialist:
 - `social-media-creator-workflow-strategy-reviewer`: Turn normalized performance data into evidence-based content strategy and testable next actions.
 - `social-media-creator-workflow-asset-distiller`: Convert completed work and validated lessons into reusable creator assets with provenance and usage limits.
 
+## 责任边界
+
+主路由只做上下文复用、工序判断、相邻工序裁决和下一步导航。完整方法放在专家
+Skill 与对应的 `knowledge/skill-packs/`，避免路由器逐渐膨胀。
+
+专家拥有一个清楚结果。相邻工序使用稳定裁决：
+
+- 选题未确定 → 定选题；选题已定、需要结构 → 出提纲；
+- 需要内容逻辑 → 出提纲；需要镜头和地点 → 布场景；
+- 需要拍摄方案 → 布场景；准备开拍或补拍 → 引导拍摄；
+- 需要文字 → 出文章；需要素材取舍 → 粗剪；
+- 主线未稳定 → 粗剪；需要字幕音乐包装 → 精剪；
+- 需要能否发布判断 → 审片；需要实际修改 → 回退对应工序；
+- 需要清洗数字 → 数据整理；需要运营判断 → 策略复盘；
+- 需要下一步行动 → 策略复盘；需要长期复用 → 资产沉淀。
+
+## 数据流
+
+```mermaid
+flowchart TD
+    P[project-profile<br/>账号、受众、IP、商业目标]
+    R[main router]
+    E[one specialist]
+    H[workflow handoff]
+    K[knowledge assets]
+
+    P --> R
+    R --> E
+    K --> E
+    E --> H
+    H --> R
+    E -. validated learning .-> K
+```
+
+专家按 `knowledge/workflow-contract.md` 交接：
+
+- 当前工序；
+- 实际使用的输入；
+- 必要假设；
+- 完整交付；
+- 质量检查；
+- 尚存缺口；
+- 建议下一工序。
+
+## 回退与反馈闭环
+
+- 审片可以回退到出文章、引导拍摄、粗剪或精剪；
+- 策略复盘优先把结论回流到定选题，也可影响提纲和分发；
+- 资产沉淀更新选题母题、开头、用户洞察、IP故事、场景、写作和剪辑模式；
+- 路由器每次根据最新上下文重新判断，不硬编码一条必须跑完的长链。
+
+## 共享知识
+
 Shared knowledge lives outside the skills so specialists can evolve without
 duplicating sources. `knowledge/sources.jsonl` is the provenance system of
 record. Atoms and cases cite source IDs.
@@ -23,3 +80,19 @@ record. Atoms and cases cite source IDs.
 Routing is dynamic. A specialist result may suggest a possible next expert,
 but the router re-evaluates from the latest context instead of enforcing a
 fixed chain.
+
+## 安装形态
+
+项目必须保持完整目录安装。专家通过 `../../knowledge/` 读取共享方法，因此不要
+只把单个专家目录复制到独立位置。推荐将整个仓库克隆到：
+
+```text
+~/.codex/skills/social-media-creator-workflow/
+```
+
+Codex 会递归发现 `skills/*/SKILL.md`，共享知识的相对路径保持有效。
+
+## 来源与许可证
+
+两份用户材料的来源登记在 `knowledge/sources.jsonl`。公开再分发权未确认前，
+仓库使用 Proprietary 口径并保持私有。平台时效性观点必须带来源日期与不确定性。

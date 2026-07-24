@@ -1,0 +1,23 @@
+{
+  "skill_name": "social-media-creator-workflow",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我已经确定选题了，现在想把它拆成三段结构并给不同风格的开头。",
+      "expected_output": "路由到 social-media-creator-workflow-outline-builder，不重新做选题或直接进入拍摄。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "这是后台截图和 CSV，先帮我把字段和指标整理干净，不要急着下运营结论。",
+      "expected_output": "路由到 social-media-creator-workflow-data-organizer，并把策略判断留给后续工序。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "这条成片的故事顺序没问题，我只想优化字幕、音乐和节奏。",
+      "expected_output": "路由到 social-media-creator-workflow-fine-cut-planner，而不是粗剪或审片。",
+      "files": []
+    }
+  ]
+}

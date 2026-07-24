@@ -1,0 +1,23 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate project structure
+        run: python3 tools/validate_project.py .
+      - name: Run repository tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Run CSV normalizer tests
+        run: >-
+          python3 -m unittest discover
+          -s skills/social-media-creator-workflow-data-organizer/tests -v

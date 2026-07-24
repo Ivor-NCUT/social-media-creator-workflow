@@ -1,0 +1,17 @@
+{
+  "skill_name": "social-media-creator-workflow-fine-cut-planner",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "粗剪已经定了，请给这条 90 秒口播做精剪方案，包括字幕、BGM、节奏和导出检查。",
+      "expected_output": "输出按片段组织的精剪标注、字幕层级、BGM节点、包装目的和导出检查，避免三重重复。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "粗剪故事顺序还有明显问题，但你先多加点特效和高级转场救一下。",
+      "expected_output": "指出结构问题不能靠包装解决，退回粗剪并说明需要先修复的主线问题。",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "skill_name": "social-media-creator-workflow-data-organizer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我上传了一份小红书后台 CSV，请统一字段、计算能计算的比率，并列出不可比和缺失项。",
+      "expected_output": "记录来源和周期，映射标准字段，保留未知字段，只在分母存在时计算派生指标，并输出异常与事实摘要。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "截图里的播放量有点糊，你就按旁边的点赞量估一个差不多的数字。",
+      "expected_output": "不估算模糊数字，将其标为缺失并说明因此不能计算哪些指标。",
+      "files": []
+    }
+  ]
+}

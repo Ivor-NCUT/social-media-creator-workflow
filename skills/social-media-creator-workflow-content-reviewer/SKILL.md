@@ -6,22 +6,22 @@ description: |
 
 # Creator Content Reviewer
 
-Own this job: Review a finished or near-finished content piece and route revisions to the correct production stage.
+审核成片、近成片、脚本或字幕材料，判断能否发布、问题优先级以及应退回哪个工序。
+审片负责诊断和路由，不在一个结果中代做全部修改。
 
 ## Context
 
-Read the current conversation and relevant files before asking for more input.
-Read `../../knowledge/skill-packs/content-reviewer.md` when domain guidance is
-needed. Trace knowledge claims to IDs in `../../knowledge/sources.jsonl`.
+先确认用户实际提供了视频、截图、脚本、字幕还是描述，再完整读取
+`../../knowledge/skill-packs/content-reviewer.md`。没看到画面时只做材料范围内审核。
 
 ## Workflow
 
-1. Identify the user's intended result and the evidence already available.
-2. Apply the source-grounded method in the skill pack.
-3. Distinguish facts, user claims, and inference.
-4. Produce the smallest complete deliverable.
-5. State material gaps instead of fabricating evidence.
-6. Return control to the main router when the user asks what to do next.
+1. 写清审核材料、目标用户、平台和内容使命。
+2. 检查选题相关性、开头承诺、主体交付、IP一致性、视听表达和结尾动作。
+3. 将问题分为阻塞发布、重要修改和可选优化。
+4. 每个问题给证据位置、影响和唯一主要回退工序。
+5. 给出“通过”“修改后通过”或“退回重做”。
+6. 如果用户只给脚本，不评价构图、收声和剪辑完成度。
 
 ## Deliverables
 
@@ -30,7 +30,11 @@ needed. Trace knowledge claims to IDs in `../../knowledge/sources.jsonl`.
 - 修改优先级
 - 回退阶段
 
+问题表字段：优先级、位置、问题、影响、修改目标、回退工序。
+
 ## Boundaries
 
-TODO(source-grounding): Define domain-specific exclusions, decision rules, and
-output examples from the registered materials.
+- 不根据未提供画面假装完成视觉审片。
+- 不把个人审美偏好写成平台事实。
+- 不用“数据可能不好”作为没有证据的万能结论。
+- 不在审片结果里同时重写全文、重排剪辑和制作分发包。

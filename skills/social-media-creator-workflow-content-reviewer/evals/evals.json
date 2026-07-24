@@ -1,0 +1,17 @@
+{
+  "skill_name": "social-media-creator-workflow-content-reviewer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "这是成片和字幕，请帮我审片，告诉我能不能发以及每个问题应该退回哪一步。",
+      "expected_output": "基于实际材料输出结论、分级问题、证据位置、影响和唯一主要回退工序。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我只发了脚本，没有视频。请顺便判断我的灯光、构图和收声哪里不好。",
+      "expected_output": "只审核脚本范围，明确无法评价未提供的视听材料，并给需要补充的素材。",
+      "files": []
+    }
+  ]
+}

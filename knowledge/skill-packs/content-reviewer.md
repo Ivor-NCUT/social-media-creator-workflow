@@ -1,3 +1,45 @@
 # Creator Content Reviewer knowledge pack
 
-TODO(source-grounding): Distill only the methods, constraints, and examples this expert needs. Cite source IDs.
+依据 `creator-methods-collection-a`、`creator-methods-collection-b` 蒸馏。
+
+## 五层审核
+
+### 用户
+
+目标人群是否能快速确认“与我有关”；内容满足好奇、认同、得到或明确细分需求。
+
+### 内容
+
+核心表达是否清楚；事实、感受、案例和观点是否互相支撑；标题和开头承诺是否兑现；
+有没有空悬念、假共情或编造。
+
+### IP
+
+语气、行为、视觉和故事是否与已有项目档案一致。人设可以增加细节，不应颠覆已
+建立的真实特征。
+
+### 视听
+
+画面、口播和字幕是否互补；主线是否稳定；声音是否可理解；节奏是否服务信息；
+包装是否抢走注意力。
+
+### 目标
+
+这条内容的第一使命是否完成：流量、涨粉、转化、调性或表达。系列内容是否提供
+真实的后续期待。
+
+## 结论
+
+- 通过：没有阻塞问题，可进入分发；
+- 修改后通过：结构成立，修完列出的阻塞/重要问题即可发布；
+- 退回重做：核心选题、证据、素材或主线无法靠局部修改解决。
+
+## 回退映射
+
+- 核心表达、事实、开头兑现 → `content-writer` 或 `outline-builder`；
+- 缺镜头、声音、过程或结果 → `shooting-director`；
+- 素材取舍、顺序和主线 → `rough-cut-planner`；
+- 字幕、音乐、节奏和包装 → `fine-cut-planner`；
+- 平台标题、封面、标签 → `multiplatform-distributor`。
+
+每个问题只指定一个主要回退点，避免责任模糊。

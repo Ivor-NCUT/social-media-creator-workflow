@@ -1,0 +1,17 @@
+{
+  "skill_name": "social-media-creator-workflow-multiplatform-distributor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "这条 AI 求职口播已经剪完了，请分别给小红书、抖音和公众号视频生成发布包。",
+      "expected_output": "保留核心事实与IP，为每个平台分别输出多个标题、首屏/开头、正文、封面、关键词/标签、互动和观察指标。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "三个平台都用同一段标题正文和标签，帮我直接复制一下。",
+      "expected_output": "说明需要按平台入口适配，并输出差异化发布包，而不是机械复制。",
+      "files": []
+    }
+  ]
+}

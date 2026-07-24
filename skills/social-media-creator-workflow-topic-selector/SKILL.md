@@ -6,22 +6,33 @@ description: |
 
 # Creator Topic Selector
 
-Own this job: Turn creator context, audience needs, platform signals, and content goals into prioritized topics.
+把创作者已有资源、用户需求、平台信息和本条内容使命，转成可执行的选题候选与
+优先级。用户明确选题后停止，不继续代写提纲。
 
 ## Context
 
-Read the current conversation and relevant files before asking for more input.
-Read `../../knowledge/skill-packs/topic-selector.md` when domain guidance is
-needed. Trace knowledge claims to IDs in `../../knowledge/sources.jsonl`.
+先读当前对话、用户素材和 `../../knowledge/project-profile.md`，再完整读取
+`../../knowledge/skill-packs/topic-selector.md`。涉及平台趋势时检查
+`../../knowledge/sources.jsonl`，区分当前事实、用户主张和来源观点。
 
 ## Workflow
 
-1. Identify the user's intended result and the evidence already available.
-2. Apply the source-grounded method in the skill pack.
-3. Distinguish facts, user claims, and inference.
-4. Produce the smallest complete deliverable.
-5. State material gaps instead of fabricating evidence.
-6. Return control to the main router when the user asks what to do next.
+1. 确认本轮目标平台、内容对象和最主要使命；已有信息足够时不要追问。
+2. 从用户需求、创作者资源、内容使命和平台/搜索信号四组信息生成候选。
+3. 用方法包的六项量表评分，说明分数依据，不伪造平台数据。
+4. 标记每条选题是流量型、人设型、转化型，或其明确组合。
+5. 判断适合单条还是系列；系列必须说明延续机制。
+6. 给出优先顺序和放弃理由，让用户能直接选定下一条内容。
+
+## One-question rule
+
+只有以下缺口会导致完全不同结果时，才问一个问题：
+
+- 不知道内容给谁看；
+- 不知道本轮目标是流量、涨粉、转化、调性还是表达；
+- 用户同时给出多个互不相干的账号或业务。
+
+其他缺口用合理假设继续，并把假设写清楚。
 
 ## Deliverables
 
@@ -30,7 +41,21 @@ needed. Trace knowledge claims to IDs in `../../knowledge/sources.jsonl`.
 - 内容使命
 - 系列归属
 
+使用以下表格：
+
+| 优先级 | 选题 | 目标用户与需求 | 内容使命 | 类型 | 系列机制 | 总分 | 主要依据 |
+|---|---|---|---|---|---|---:|---|
+
+表格后补充：
+
+- 首选题为什么现在值得做；
+- 哪些候选暂不做及原因；
+- 缺少哪些证据会影响排序。
+
 ## Boundaries
 
-TODO(source-grounding): Define domain-specific exclusions, decision rules, and
-output examples from the registered materials.
+- 不承诺“必爆”，不把热门词等同于好选题。
+- 不替用户判断是否有资格做企业主 IP；用户明确要做时再围绕其目标选题。
+- 不把未经当前验证的“平台红利期”“流量比例”写成确定事实。
+- 不为凑数量生成无法匹配创作者资源的选题。
+- 不进入标题、提纲、脚本或发布包装；用户继续时交回主路由。

@@ -1,0 +1,17 @@
+{
+  "skill_name": "social-media-creator-workflow-asset-distiller",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "把这次 20 条内容的复盘结果沉淀成下一轮能用的选题、开头、关键词和失败教训资产。",
+      "expected_output": "按资产类型生成Markdown索引和JSONL记录，包含状态、来源、证据、平台、人群、使命、限制和回流工序。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "有一条视频突然爆了，把它所有做法都标记成以后必须遵守的成功公式。",
+      "expected_output": "不把单次结果固化为普遍规则，将可复用部分标为待验证假设，并记录证据和限制。",
+      "files": []
+    }
+  ]
+}

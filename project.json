@@ -1,0 +1,235 @@
+{
+  "project_name": "social-media-creator-workflow",
+  "display_name": "Social Media Creator Workflow",
+  "description": "A creator-first MOE skill system for moving social media content from topic selection to reusable content assets.",
+  "author": "Ivor-NCUT",
+  "license": "Proprietary",
+  "experts": [
+    {
+      "id": "topic-selector",
+      "name": "Creator Topic Selector",
+      "description": "Turn creator context, audience needs, platform signals, and content goals into prioritized topics.",
+      "triggers": [
+        "定选题",
+        "选题规划",
+        "下一条拍什么",
+        "内容选题"
+      ],
+      "deliverables": [
+        "选题候选",
+        "选题评分",
+        "内容使命",
+        "系列归属"
+      ]
+    },
+    {
+      "id": "outline-builder",
+      "name": "Creator Outline Builder",
+      "description": "Turn an accepted topic into a shootable and writable content outline with multiple opening options.",
+      "triggers": [
+        "出提纲",
+        "内容结构",
+        "视频大纲",
+        "多个开头"
+      ],
+      "deliverables": [
+        "标题候选",
+        "多版本开头",
+        "结构提纲",
+        "结尾动作"
+      ]
+    },
+    {
+      "id": "scene-designer",
+      "name": "Creator Scene Designer",
+      "description": "Translate an outline into scenes, shots, props, actions, and visual information.",
+      "triggers": [
+        "布场景",
+        "镜头设计",
+        "拍摄场景",
+        "分镜"
+      ],
+      "deliverables": [
+        "场景表",
+        "镜头表",
+        "道具清单",
+        "转场关系"
+      ]
+    },
+    {
+      "id": "shooting-director",
+      "name": "Creator Shooting Director",
+      "description": "Guide the creator through capturing complete, usable, and expressive footage.",
+      "triggers": [
+        "引导拍摄",
+        "拍摄指导",
+        "补拍清单",
+        "怎么拍"
+      ],
+      "deliverables": [
+        "拍摄顺序",
+        "逐镜提示",
+        "表演提示",
+        "补拍清单"
+      ]
+    },
+    {
+      "id": "content-writer",
+      "name": "Creator Content Writer",
+      "description": "Turn topics, outlines, and footage notes into scripts, narration, posts, or publishable articles.",
+      "triggers": [
+        "出文章",
+        "写口播稿",
+        "写旁白",
+        "写图文"
+      ],
+      "deliverables": [
+        "完整正文",
+        "口播稿",
+        "旁白",
+        "字幕稿"
+      ]
+    },
+    {
+      "id": "rough-cut-planner",
+      "name": "Creator Rough Cut Planner",
+      "description": "Build the first coherent edit from raw footage while preserving the story and identifying missing material.",
+      "triggers": [
+        "粗剪",
+        "素材筛选",
+        "粗剪时间线",
+        "整理素材"
+      ],
+      "deliverables": [
+        "粗剪时间线",
+        "保留片段",
+        "删除片段",
+        "补拍点"
+      ]
+    },
+    {
+      "id": "fine-cut-planner",
+      "name": "Creator Fine Cut Planner",
+      "description": "Specify pacing, captions, music, visual packaging, and export requirements after the rough cut is stable.",
+      "triggers": [
+        "精剪",
+        "字幕包装",
+        "BGM设计",
+        "剪辑节奏"
+      ],
+      "deliverables": [
+        "精剪标注",
+        "字幕层级",
+        "BGM节点",
+        "导出要求"
+      ]
+    },
+    {
+      "id": "content-reviewer",
+      "name": "Creator Content Reviewer",
+      "description": "Review a finished or near-finished content piece and route revisions to the correct production stage.",
+      "triggers": [
+        "审片",
+        "内容审核",
+        "成片复查",
+        "发布前检查"
+      ],
+      "deliverables": [
+        "审核结论",
+        "问题清单",
+        "修改优先级",
+        "回退阶段"
+      ]
+    },
+    {
+      "id": "multiplatform-distributor",
+      "name": "Creator Multiplatform Distributor",
+      "description": "Adapt one content asset into platform-specific publishing packages without flattening platform differences.",
+      "triggers": [
+        "多平台分发",
+        "一稿多发",
+        "小红书适配",
+        "平台发布"
+      ],
+      "deliverables": [
+        "平台标题",
+        "发布正文",
+        "封面文案",
+        "标签关键词"
+      ]
+    },
+    {
+      "id": "data-organizer",
+      "name": "Creator Data Organizer",
+      "description": "Normalize creator-provided screenshots or CSV exports into a comparable, auditable content dataset.",
+      "triggers": [
+        "数据整理",
+        "后台截图",
+        "CSV分析",
+        "运营数据清洗"
+      ],
+      "deliverables": [
+        "标准化数据",
+        "派生指标",
+        "异常记录",
+        "数据摘要"
+      ]
+    },
+    {
+      "id": "strategy-reviewer",
+      "name": "Creator Strategy Reviewer",
+      "description": "Turn normalized performance data into evidence-based content strategy and testable next actions.",
+      "triggers": [
+        "策略复盘",
+        "运营建议",
+        "数据复盘",
+        "下一步怎么做"
+      ],
+      "deliverables": [
+        "问题诊断",
+        "策略建议",
+        "实验方案",
+        "行动计划"
+      ]
+    },
+    {
+      "id": "asset-distiller",
+      "name": "Creator Asset Distiller",
+      "description": "Convert completed work and validated lessons into reusable creator assets with provenance and usage limits.",
+      "triggers": [
+        "内容资产沉淀",
+        "方法复用",
+        "素材库",
+        "经验沉淀"
+      ],
+      "deliverables": [
+        "内容资产",
+        "复用模板",
+        "来源记录",
+        "使用边界"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "creator-methods-collection-a",
+      "title": "自媒体起号、运营与内容方法论合集 A",
+      "source_type": "user-provided",
+      "location": "https://twoj0037lkv.feishu.cn/wiki/UlS5w5uwwiBZtUkkhNCcb34knze",
+      "license": "unknown",
+      "owner": "unknown",
+      "allowed_use": "Reference-only distillation inside this private project until redistribution rights are confirmed.",
+      "notes": "Do not copy long passages or branded expression."
+    },
+    {
+      "id": "creator-methods-collection-b",
+      "title": "自媒体起号、运营与内容方法论合集 B",
+      "source_type": "user-provided",
+      "location": "https://twoj0037lkv.feishu.cn/wiki/WYWWwUENxiIMgCki6xncdGIXnpf",
+      "license": "unknown",
+      "owner": "unknown",
+      "allowed_use": "Reference-only distillation inside this private project until redistribution rights are confirmed.",
+      "notes": "Time-sensitive platform claims must retain dates and uncertainty."
+    }
+  ]
+}

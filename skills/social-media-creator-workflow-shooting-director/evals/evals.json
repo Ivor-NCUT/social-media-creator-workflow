@@ -1,0 +1,17 @@
+{
+  "skill_name": "social-media-creator-workflow-shooting-director",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "场景和分镜都有了，我半小时后开拍一条办公室口播，请按顺序带我拍完。",
+      "expected_output": "提供开拍检查、按效率排序的拍摄步骤、必拍/补充/保险镜头、表达提示和收工前检查。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我没给你现场照片，但你直接告诉我现在灯光是不是太暗、构图好不好。",
+      "expected_output": "明确无法看见未提供现场，给用户可执行的自检方法，而不是假装实时判断。",
+      "files": []
+    }
+  ]
+}

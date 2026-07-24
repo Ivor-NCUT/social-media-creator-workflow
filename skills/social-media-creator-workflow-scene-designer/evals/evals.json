@@ -1,0 +1,17 @@
+{
+  "skill_name": "social-media-creator-workflow-scene-designer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我有一份三段式口播提纲，只能用手机、白板和办公室拍。帮我布场景和分镜。",
+      "expected_output": "输出可执行的场景表与镜头表，复用现有设备，说明每个画面的内容任务，并避免画面重复台词。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我今天去拜访一个创业者，想拍 VLOG，但目前只有行程，没有故事。",
+      "expected_output": "从好奇/陪伴/造梦与真实、反差、交互中建立主线，列必拍过程素材，不编造冲突。",
+      "files": []
+    }
+  ]
+}

@@ -4,9 +4,9 @@
 
 ### 从一个选题，到一套会持续变聪明的内容生产系统
 
-![Version](https://img.shields.io/badge/version-1.0.0-16a34a?style=for-the-badge)
-![Workflow](https://img.shields.io/badge/workflow-12_steps-0f766e?style=for-the-badge)
-![Skills](https://img.shields.io/badge/MOE-1_router_%2B_12_experts-2563eb?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.1.0-16a34a?style=for-the-badge)
+![Workflow](https://img.shields.io/badge/workflow-13_steps-0f766e?style=for-the-badge)
+![Skills](https://img.shields.io/badge/MOE-1_router_%2B_13_experts-2563eb?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-Proprietary-334155?style=for-the-badge)
 
 一个以创作者真实工作流为骨架的多专家 Agent Skill 项目。
@@ -30,12 +30,14 @@ flowchart LR
     F --> G[精剪]
     G --> H[审片]
     H --> I[多平台分发]
-    I --> J[数据整理]
-    J --> K[策略复盘]
-    K --> L[内容资产沉淀]
-    L -. 复用资产 .-> A
+    I -. 小红书内容 .-> X[生成小红书封面]
+    I --> K[数据整理]
+    X --> K
+    K --> L[策略复盘]
+    L --> M[内容资产沉淀]
+    M -. 复用资产 .-> A
     H -. 退回修改 .-> E
-    K -. 策略回流 .-> A
+    L -. 策略回流 .-> A
 ```
 
 每个工序由一个独立专家负责。主路由只判断当前最适合进入哪一步，不会把所有方法
@@ -74,7 +76,7 @@ gh repo clone Ivor-NCUT/social-media-creator-workflow
 并标出缺失项和不可比数据。
 ```
 
-## 🧩 1 个主路由 + 12 个专家
+## 🧩 1 个主路由 + 13 个专家
 
 | 工序 | Skill | 主要交付 |
 |---|---|---|
@@ -88,9 +90,22 @@ gh repo clone Ivor-NCUT/social-media-creator-workflow
 | 07 精剪 | `social-media-creator-workflow-fine-cut-planner` | 节奏、字幕、BGM、包装与导出标注 |
 | 08 审片 | `social-media-creator-workflow-content-reviewer` | 审核结论、问题优先级、回退工序 |
 | 09 多平台分发 | `social-media-creator-workflow-multiplatform-distributor` | 平台标题、封面、正文与关键词 |
-| 10 数据整理 | `social-media-creator-workflow-data-organizer` | 标准化数据、派生指标、异常记录 |
-| 11 策略复盘 | `social-media-creator-workflow-strategy-reviewer` | 诊断、置信度、实验与行动计划 |
-| 12 资产沉淀 | `social-media-creator-workflow-asset-distiller` | 复用模板、证据、来源与使用边界 |
+| 10 小红书封面 | `social-media-creator-workflow-xhs-cover` | 封面生成、局部修改、参考图风格学习 |
+| 11 数据整理 | `social-media-creator-workflow-data-organizer` | 标准化数据、派生指标、异常记录 |
+| 12 策略复盘 | `social-media-creator-workflow-strategy-reviewer` | 诊断、置信度、实验与行动计划 |
+| 13 资产沉淀 | `social-media-creator-workflow-asset-distiller` | 复用模板、证据、来源与使用边界 |
+
+## 🎨 小红书封面能力与作者
+
+小红书封面专家改编自
+[`Vivixiao980/xhs-cover-skill`](https://github.com/Vivixiao980/xhs-cover-skill)，并已接入
+主路由。它覆盖新封面生成、基于上一版的局部修改、参考图风格提取，以及 18 种预设
+视觉方向；在 Codex 中优先使用原生图片生成/编辑能力，不要求额外配置 API。
+
+上游作者 **Vivi（[@Vivixiao980](https://github.com/Vivixiao980)）** 围绕小红书封面
+创作整理了这套开源 Skill，将常见视觉风格、封面生成与修改流程、参考图风格学习和
+命令行备用能力放进一个可复用工作流。本项目保留其仓库链接、作者署名、集成版本与
+MIT 许可证说明；具体见 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)。
 
 ## 🧠 内嵌的方法论
 
@@ -124,7 +139,7 @@ python3 \
 
 ```text
 social-media-creator-workflow/
-├── skills/                 # 主路由与 12 个专家
+├── skills/                 # 主路由与 13 个专家
 ├── knowledge/
 │   ├── skill-packs/        # 每个专家专用方法
 │   ├── atoms/              # 可追溯方法原子
@@ -158,13 +173,16 @@ done
 
 ## 🔐 来源与分发边界
 
-本项目的方法来自用户提供的两份材料，经原创抽象后写入 Skills。原始材料的公开
-再分发授权尚未确认，因此：
+本项目的通用内容方法来自用户提供的两份材料，经原创抽象后写入 Skills。原始材料
+的公开再分发授权尚未确认，因此：
 
-- 仓库暂时保持私有；
 - 不复制长段原文或独特品牌表达；
 - 平台规则、流量比例和红利期等时效性观点不作为永久事实；
 - 公开发布前需要重新确认材料权利和许可证。
+
+小红书封面专家另行改编自公开项目
+[`Vivixiao980/xhs-cover-skill`](https://github.com/Vivixiao980/xhs-cover-skill)，遵循
+其上游 README 声明的 MIT 许可证和本仓库的第三方归属说明。
 
 ## 🗺️ 参与开发
 

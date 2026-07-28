@@ -16,6 +16,7 @@
 - `social-media-creator-workflow-fine-cut-planner`: Specify pacing, captions, music, visual packaging, and export requirements after the rough cut is stable.
 - `social-media-creator-workflow-content-reviewer`: Review a finished or near-finished content piece and route revisions to the correct production stage.
 - `social-media-creator-workflow-multiplatform-distributor`: Adapt one content asset into platform-specific publishing packages without flattening platform differences.
+- `social-media-creator-workflow-xhs-cover`: Generate, edit, or learn a Xiaohongshu cover style with Codex image generation and 18 presets adapted from Vivi's xhs-cover-skill.
 - `social-media-creator-workflow-data-organizer`: Normalize creator-provided screenshots or CSV exports into a comparable, auditable content dataset.
 - `social-media-creator-workflow-strategy-reviewer`: Turn normalized performance data into evidence-based content strategy and testable next actions.
 - `social-media-creator-workflow-asset-distiller`: Convert completed work and validated lessons into reusable creator assets with provenance and usage limits.
@@ -33,6 +34,8 @@ Skill 与对应的 `knowledge/skill-packs/`，避免路由器逐渐膨胀。
 - 需要文字 → 出文章；需要素材取舍 → 粗剪；
 - 主线未稳定 → 粗剪；需要字幕音乐包装 → 精剪；
 - 需要能否发布判断 → 审片；需要实际修改 → 回退对应工序；
+- 需要标题、正文、标签等发布包装 → 多平台分发；需要实际生成或修改小红书封面
+  图片 → 小红书封面；
 - 需要清洗数字 → 数据整理；需要运营判断 → 策略复盘；
 - 需要下一步行动 → 策略复盘；需要长期复用 → 资产沉淀。
 
@@ -77,6 +80,11 @@ Shared knowledge lives outside the skills so specialists can evolve without
 duplicating sources. `knowledge/sources.jsonl` is the provenance system of
 record. Atoms and cases cite source IDs.
 
+小红书封面专家的 Codex 原生工作流和 18 种预设风格改编自
+[`Vivixiao980/xhs-cover-skill`](https://github.com/Vivixiao980/xhs-cover-skill)。
+本仓库保留作者 Vivi（[@Vivixiao980](https://github.com/Vivixiao980)）、上游版本与
+MIT 归属；Node.js / Gemini CLI 备用路径不在本仓库重复维护。
+
 Routing is dynamic. A specialist result may suggest a possible next expert,
 but the router re-evaluates from the latest context instead of enforcing a
 fixed chain.
@@ -94,5 +102,6 @@ Codex 会递归发现 `skills/*/SKILL.md`，共享知识的相对路径保持有
 
 ## 来源与许可证
 
-两份用户材料的来源登记在 `knowledge/sources.jsonl`。公开再分发权未确认前，
-仓库使用 Proprietary 口径并保持私有。平台时效性观点必须带来源日期与不确定性。
+两份用户材料及上游开源 Skill 的来源登记在 `knowledge/sources.jsonl`。用户材料的
+公开再分发权未确认，项目主体继续使用 Proprietary 口径；改编的小红书封面部分遵循
+`THIRD_PARTY_NOTICES.md` 中的 MIT 归属。平台时效性观点必须带来源日期与不确定性。

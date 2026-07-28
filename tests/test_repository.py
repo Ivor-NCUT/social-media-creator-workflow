@@ -21,7 +21,7 @@ SKILL_NAME_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 class RepositoryTest(unittest.TestCase):
     def test_expected_expert_count_and_names(self) -> None:
         experts = PROJECT["experts"]
-        self.assertEqual(len(experts), 12)
+        self.assertEqual(len(experts), 13)
         ids = [expert["id"] for expert in experts]
         self.assertEqual(len(ids), len(set(ids)))
         self.assertTrue(all(SKILL_NAME_RE.fullmatch(expert_id) for expert_id in ids))

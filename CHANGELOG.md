@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.0 - 2026-07-28
+
+- Added a Xiaohongshu cover specialist adapted from
+  [Vivixiao980/xhs-cover-skill](https://github.com/Vivixiao980/xhs-cover-skill).
+- Added 18 preset style references plus native Codex generation, editing, and style-learning
+  routes.
+- Added upstream author, source commit, and MIT attribution.
+
 ## 1.0.0 - 2026-07-24
 
 - Added one dynamic creator-workflow router.

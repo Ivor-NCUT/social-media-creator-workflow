@@ -8,6 +8,7 @@
   {"prompt":"粗剪已定，请优化字幕包装和剪辑节奏。","expected":"fine-cut-planner"},
   {"prompt":"请审片并告诉我哪里要退回修改。","expected":"content-reviewer"},
   {"prompt":"把成片做成小红书和短视频平台的多平台分发包。","expected":"multiplatform-distributor"},
+  {"prompt":"用这张人像生成封面，做一张3:4的小红书封面。","expected":"xhs-cover"},
   {"prompt":"这是后台截图和CSV，先做数据整理。","expected":"data-organizer"},
   {"prompt":"基于整理后的数据做策略复盘。","expected":"strategy-reviewer"},
   {"prompt":"把这次经验做成内容资产沉淀。","expected":"asset-distiller"}

@@ -23,6 +23,7 @@ description: |
 | Creator Fine Cut Planner | `social-media-creator-workflow-fine-cut-planner` | Specify pacing, captions, music, visual packaging, and export requirements after the rough cut is stable. | 精剪、字幕包装、BGM设计、剪辑节奏 |
 | Creator Content Reviewer | `social-media-creator-workflow-content-reviewer` | Review a finished or near-finished content piece and route revisions to the correct production stage. | 审片、内容审核、成片复查、发布前检查 |
 | Creator Multiplatform Distributor | `social-media-creator-workflow-multiplatform-distributor` | Adapt one content asset into platform-specific publishing packages without flattening platform differences. | 多平台分发、一稿多发、小红书适配、平台发布 |
+| Xiaohongshu Cover Creator | `social-media-creator-workflow-xhs-cover` | Generate, edit, or learn a Xiaohongshu cover style with Codex image generation and 18 presets adapted from Vivi's xhs-cover-skill. | 小红书封面、xhs封面、生成封面、修改封面 |
 | Creator Data Organizer | `social-media-creator-workflow-data-organizer` | Normalize creator-provided screenshots or CSV exports into a comparable, auditable content dataset. | 数据整理、后台截图、CSV分析、运营数据清洗 |
 | Creator Strategy Reviewer | `social-media-creator-workflow-strategy-reviewer` | Turn normalized performance data into evidence-based content strategy and testable next actions. | 策略复盘、运营建议、数据复盘、下一步怎么做 |
 | Creator Asset Distiller | `social-media-creator-workflow-asset-distiller` | Convert completed work and validated lessons into reusable creator assets with provenance and usage limits. | 内容资产沉淀、方法复用、素材库、经验沉淀 |
@@ -54,6 +55,8 @@ description: |
   `content-reviewer`。
 - 用户要发布包装时用 `multiplatform-distributor`；用户提供发布后的截图或 CSV
   时用 `data-organizer`。
+- 用户要标题、正文、标签等整套发布包装时用 `multiplatform-distributor`；用户
+  要直接生成、修改或学习小红书封面风格时用 `xhs-cover`。
 - 用户要清洗和统一数据时用 `data-organizer`；用户要基于数据做决策时用
   `strategy-reviewer`。
 - 用户要下一轮运营动作时用 `strategy-reviewer`；用户要把经验写入可复用模板和

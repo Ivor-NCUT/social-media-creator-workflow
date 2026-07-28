@@ -159,6 +159,23 @@
       ]
     },
     {
+      "id": "xhs-cover",
+      "name": "Xiaohongshu Cover Creator",
+      "description": "Generate, edit, or learn a Xiaohongshu cover style with Codex image generation and 18 presets adapted from Vivi's xhs-cover-skill.",
+      "triggers": [
+        "小红书封面",
+        "xhs封面",
+        "生成封面",
+        "修改封面"
+      ],
+      "deliverables": [
+        "封面图片",
+        "风格选择",
+        "版式说明",
+        "修改记录"
+      ]
+    },
+    {
       "id": "data-organizer",
       "name": "Creator Data Organizer",
       "description": "Normalize creator-provided screenshots or CSV exports into a comparable, auditable content dataset.",
@@ -218,7 +235,7 @@
       "location": "https://twoj0037lkv.feishu.cn/wiki/UlS5w5uwwiBZtUkkhNCcb34knze",
       "license": "unknown",
       "owner": "unknown",
-      "allowed_use": "Reference-only distillation inside this private project until redistribution rights are confirmed.",
+      "allowed_use": "Reference-only distillation in this project until redistribution rights are confirmed.",
       "notes": "Do not copy long passages or branded expression."
     },
     {
@@ -228,8 +245,18 @@
       "location": "https://twoj0037lkv.feishu.cn/wiki/WYWWwUENxiIMgCki6xncdGIXnpf",
       "license": "unknown",
       "owner": "unknown",
-      "allowed_use": "Reference-only distillation inside this private project until redistribution rights are confirmed.",
+      "allowed_use": "Reference-only distillation in this project until redistribution rights are confirmed.",
       "notes": "Time-sensitive platform claims must retain dates and uncertainty."
+    },
+    {
+      "id": "vivixiao980-xhs-cover-skill",
+      "title": "xhs-cover-skill",
+      "source_type": "open-source-skill",
+      "location": "https://github.com/Vivixiao980/xhs-cover-skill",
+      "license": "MIT (declared in upstream README)",
+      "owner": "Vivi (@Vivixiao980)",
+      "allowed_use": "Adapt the Codex-native generation, editing, style-learning workflow, and preset style vocabulary with attribution.",
+      "notes": "Integrated from commit 25a7279ff36931fc4eab069999adb1ad988b5d27; Node.js/Gemini CLI fallback is not vendored."
     }
   ]
 }

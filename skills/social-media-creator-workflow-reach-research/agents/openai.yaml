@@ -1,0 +1,4 @@
+interface:
+  display_name: "社媒触达调研"
+  short_description: "搜索公开平台信号并形成带来源、日期和不确定性的触达判断"
+  default_prompt: "使用 $social-media-creator-workflow-reach-research 调研这个社媒选题。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "活人感招聘"
+  short_description: "从候选人视角写机会优先、待遇清楚且自然可信的招聘内容"
+  default_prompt: "使用 $social-media-creator-workflow-recruitment-human-ad 写这条招聘内容。"

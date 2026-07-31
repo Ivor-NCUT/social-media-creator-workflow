@@ -1,7 +1,7 @@
 ---
 name: social-media-creator-workflow
 description: |
-  A creator-first MOE skill system for moving social media content from topic selection to reusable content assets.
+  公司级社媒运营 MOE 主入口。用于选题、内容生产、拍摄剪辑、活人感广告与招聘、公开平台调研、多平台分发、开源项目宣发、数据复盘和资产沉淀；根据用户当前工序只调用一个专家。
 ---
 
 # Social Media Creator Workflow
@@ -27,6 +27,10 @@ description: |
 | Creator Data Organizer | `social-media-creator-workflow-data-organizer` | Normalize creator-provided screenshots or CSV exports into a comparable, auditable content dataset. | 数据整理、后台截图、CSV分析、运营数据清洗 |
 | Creator Strategy Reviewer | `social-media-creator-workflow-strategy-reviewer` | Turn normalized performance data into evidence-based content strategy and testable next actions. | 策略复盘、运营建议、数据复盘、下一步怎么做 |
 | Creator Asset Distiller | `social-media-creator-workflow-asset-distiller` | Convert completed work and validated lessons into reusable creator assets with provenance and usage limits. | 内容资产沉淀、方法复用、素材库、经验沉淀 |
+| Xiaohongshu Human-feel Ad Writer | `social-media-creator-workflow-xhs-human-ad` | Write natural, evidence-grounded Xiaohongshu ads without fake personal experience. | 活人感小红书广告、小红书广告、产品种草 |
+| Recruitment Human-feel Writer | `social-media-creator-workflow-recruitment-human-ad` | Write candidate-first recruitment content with concrete opportunity and compensation. | 活人感招聘、招聘广告、岗位招募 |
+| Creator Reach Researcher | `social-media-creator-workflow-reach-research` | Research public platform signals with dated sources and uncertainty. | 社媒搜索、触达调研、Agent Reach |
+| Open-source Launch Writer | `social-media-creator-workflow-open-source-launch` | Turn verified release facts into a cross-platform launch package. | 开源宣发、GitHub 发布宣传、项目发布 |
 
 ## Routing workflow
 
@@ -61,6 +65,14 @@ description: |
   `strategy-reviewer`。
 - 用户要下一轮运营动作时用 `strategy-reviewer`；用户要把经验写入可复用模板和
   素材库时用 `asset-distiller`。
+- 用户明确要小红书商业广告时用 `xhs-human-ad`；普通非商业正文仍用
+  `content-writer`。
+- 招聘岗位传播用 `recruitment-human-ad`；候选人搜索、匹配和数据库操作不属于
+  社媒工作流。
+- 需要公开平台证据和账号触达路径时用 `reach-research`；已有事实只需写稿时用
+  对应写作专家。
+- 开源仓库、版本和验证事实已确认后用 `open-source-launch`；未发布的产品构想不
+  冒充已发布项目。
 
 ## Workflow feedback loops
 

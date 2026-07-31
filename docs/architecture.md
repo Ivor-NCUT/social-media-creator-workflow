@@ -20,6 +20,10 @@
 - `social-media-creator-workflow-data-organizer`: Normalize creator-provided screenshots or CSV exports into a comparable, auditable content dataset.
 - `social-media-creator-workflow-strategy-reviewer`: Turn normalized performance data into evidence-based content strategy and testable next actions.
 - `social-media-creator-workflow-asset-distiller`: Convert completed work and validated lessons into reusable creator assets with provenance and usage limits.
+- `social-media-creator-workflow-xhs-human-ad`: Write evidence-grounded Xiaohongshu advertising copy with natural human rhythm.
+- `social-media-creator-workflow-recruitment-human-ad`: Write candidate-first recruitment content.
+- `social-media-creator-workflow-reach-research`: Research dated public platform signals and reach paths.
+- `social-media-creator-workflow-open-source-launch`: Produce a verified cross-platform open-source launch package.
 
 ## 责任边界
 
@@ -38,6 +42,9 @@ Skill 与对应的 `knowledge/skill-packs/`，避免路由器逐渐膨胀。
   图片 → 小红书封面；
 - 需要清洗数字 → 数据整理；需要运营判断 → 策略复盘；
 - 需要下一步行动 → 策略复盘；需要长期复用 → 资产沉淀。
+- 普通正文 → 内容写作；商业小红书广告 → 活人感小红书广告；
+- 招聘传播 → 活人感招聘；候选人搜索和数据库操作 → 外部招聘工具；
+- 需要公开证据 → 触达调研；已有验证事实的开源发布 → 开源项目宣发。
 
 ## 数据流
 
@@ -102,6 +109,6 @@ Codex 会递归发现 `skills/*/SKILL.md`，共享知识的相对路径保持有
 
 ## 来源与许可证
 
-两份用户材料及上游开源 Skill 的来源登记在 `knowledge/sources.jsonl`。用户材料的
-公开再分发权未确认，项目主体继续使用 Proprietary 口径；改编的小红书封面部分遵循
+仓库原创内容使用 MIT。两份用户材料的公开再分发权未确认，因此只保留来源登记和
+抽象规则，不分发原文或独特表达；改编的小红书封面部分继续遵循
 `THIRD_PARTY_NOTICES.md` 中的 MIT 归属。平台时效性观点必须带来源日期与不确定性。

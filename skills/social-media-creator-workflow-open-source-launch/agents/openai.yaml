@@ -1,0 +1,4 @@
+interface:
+  display_name: "开源项目宣发"
+  short_description: "把已验证的开源发布事实改写成跨平台宣发内容和发布清单"
+  default_prompt: "使用 $social-media-creator-workflow-open-source-launch 为这个开源项目准备宣发。"

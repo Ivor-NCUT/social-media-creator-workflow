@@ -1,0 +1,4 @@
+interface:
+  display_name: "小红书活人感广告"
+  short_description: "把真实产品机会写成自然可信且可直接发布的小红书广告内容"
+  default_prompt: "使用 $social-media-creator-workflow-xhs-human-ad 写这条小红书广告。"

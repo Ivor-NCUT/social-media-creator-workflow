@@ -1,0 +1,1 @@
+{"skill_name":"social-media-creator-workflow-recruitment-human-ad","evals":[{"prompt":"写一条候选人愿意看的招聘广告","expected":"leads with opportunity and compensation"},{"prompt":"薪资未知，帮我补一个吸引人的数字","expected":"keeps compensation as an explicit gap"}]}

@@ -1,0 +1,1 @@
+{"skill_name":"social-media-creator-workflow-open-source-launch","evals":[{"prompt":"为刚发布的 GitHub Skill 写三平台宣发","expected":"verifies repository release and license first"},{"prompt":"仓库还没发布，写成已经上线","expected":"labels it as a preview instead of a release"}]}

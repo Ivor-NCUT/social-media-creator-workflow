@@ -3,7 +3,7 @@
   "display_name": "Social Media Creator Workflow",
   "description": "A creator-first MOE skill system for moving social media content from topic selection to reusable content assets.",
   "author": "Ivor-NCUT",
-  "license": "Proprietary",
+  "license": "MIT",
   "experts": [
     {
       "id": "topic-selector",
@@ -225,6 +225,70 @@
         "来源记录",
         "使用边界"
       ]
+    },
+    {
+      "id": "xhs-human-ad",
+      "name": "Xiaohongshu Human-feel Ad Writer",
+      "description": "Write natural, evidence-grounded Xiaohongshu ads without fabricated experience.",
+      "triggers": [
+        "活人感小红书广告",
+        "小红书广告",
+        "产品种草"
+      ],
+      "deliverables": [
+        "标题",
+        "正文",
+        "事实核对项",
+        "标签"
+      ]
+    },
+    {
+      "id": "recruitment-human-ad",
+      "name": "Recruitment Human-feel Writer",
+      "description": "Write candidate-first recruitment content with concrete opportunity and compensation.",
+      "triggers": [
+        "活人感招聘",
+        "招聘广告",
+        "岗位招募"
+      ],
+      "deliverables": [
+        "招聘标题",
+        "招聘正文",
+        "事实核对项",
+        "投递动作"
+      ]
+    },
+    {
+      "id": "reach-research",
+      "name": "Creator Reach Researcher",
+      "description": "Research public platform signals with dated sources and uncertainty.",
+      "triggers": [
+        "社媒搜索",
+        "触达调研",
+        "Agent Reach"
+      ],
+      "deliverables": [
+        "来源清单",
+        "共同信号",
+        "触达建议",
+        "不确定项"
+      ]
+    },
+    {
+      "id": "open-source-launch",
+      "name": "Open-source Launch Writer",
+      "description": "Turn verified release facts into a cross-platform launch package.",
+      "triggers": [
+        "开源宣发",
+        "GitHub 发布宣传",
+        "项目发布"
+      ],
+      "deliverables": [
+        "X 动态",
+        "公众号文章",
+        "小红书笔记",
+        "事实核对表"
+      ]
     }
   ],
   "sources": [
@@ -257,6 +321,26 @@
       "owner": "Vivi (@Vivixiao980)",
       "allowed_use": "Adapt the Codex-native generation, editing, style-learning workflow, and preset style vocabulary with attribution.",
       "notes": "Integrated from commit 25a7279ff36931fc4eab069999adb1ad988b5d27; Node.js/Gemini CLI fallback is not vendored."
+    },
+    {
+      "id": "fanhan-human-feel-writing-skills",
+      "title": "User-owned human-feel advertising and recruitment Skills",
+      "source_type": "user-owned-skills",
+      "location": "local installation",
+      "license": "user-authorized",
+      "owner": "Ivor-NCUT",
+      "allowed_use": "Distill general writing decisions; do not publish private examples or user data.",
+      "notes": "Original local Skills remain compatible and are not copied verbatim."
+    },
+    {
+      "id": "agent-reach",
+      "title": "agent-reach",
+      "source_type": "installed-skill",
+      "location": "local installation",
+      "license": "external",
+      "owner": "external",
+      "allowed_use": "Invoke when installed; do not vendor.",
+      "notes": "Public search dependency only."
     }
   ]
 }

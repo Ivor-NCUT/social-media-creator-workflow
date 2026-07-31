@@ -1,15 +1,70 @@
 [
-  {"prompt":"帮我定选题，下一条拍什么？","expected":"topic-selector"},
-  {"prompt":"选题定了，帮我出提纲和多个开头。","expected":"outline-builder"},
-  {"prompt":"提纲有了，请布场景并给分镜。","expected":"scene-designer"},
-  {"prompt":"我准备开拍，请引导拍摄并给补拍清单。","expected":"shooting-director"},
-  {"prompt":"把这些采访素材写口播稿。","expected":"content-writer"},
-  {"prompt":"这是带时间码的转写，请做粗剪时间线。","expected":"rough-cut-planner"},
-  {"prompt":"粗剪已定，请优化字幕包装和剪辑节奏。","expected":"fine-cut-planner"},
-  {"prompt":"请审片并告诉我哪里要退回修改。","expected":"content-reviewer"},
-  {"prompt":"把成片做成小红书和短视频平台的多平台分发包。","expected":"multiplatform-distributor"},
-  {"prompt":"用这张人像生成封面，做一张3:4的小红书封面。","expected":"xhs-cover"},
-  {"prompt":"这是后台截图和CSV，先做数据整理。","expected":"data-organizer"},
-  {"prompt":"基于整理后的数据做策略复盘。","expected":"strategy-reviewer"},
-  {"prompt":"把这次经验做成内容资产沉淀。","expected":"asset-distiller"}
+  {
+    "prompt": "帮我定选题，下一条拍什么？",
+    "expected": "topic-selector"
+  },
+  {
+    "prompt": "选题定了，帮我出提纲和多个开头。",
+    "expected": "outline-builder"
+  },
+  {
+    "prompt": "提纲有了，请布场景并给分镜。",
+    "expected": "scene-designer"
+  },
+  {
+    "prompt": "我准备开拍，请引导拍摄并给补拍清单。",
+    "expected": "shooting-director"
+  },
+  {
+    "prompt": "把这些采访素材写口播稿。",
+    "expected": "content-writer"
+  },
+  {
+    "prompt": "这是带时间码的转写，请做粗剪时间线。",
+    "expected": "rough-cut-planner"
+  },
+  {
+    "prompt": "粗剪已定，请优化字幕包装和剪辑节奏。",
+    "expected": "fine-cut-planner"
+  },
+  {
+    "prompt": "请审片并告诉我哪里要退回修改。",
+    "expected": "content-reviewer"
+  },
+  {
+    "prompt": "把成片做成小红书和短视频平台的多平台分发包。",
+    "expected": "multiplatform-distributor"
+  },
+  {
+    "prompt": "用这张人像生成封面，做一张3:4的小红书封面。",
+    "expected": "xhs-cover"
+  },
+  {
+    "prompt": "这是后台截图和CSV，先做数据整理。",
+    "expected": "data-organizer"
+  },
+  {
+    "prompt": "基于整理后的数据做策略复盘。",
+    "expected": "strategy-reviewer"
+  },
+  {
+    "prompt": "把这次经验做成内容资产沉淀。",
+    "expected": "asset-distiller"
+  },
+  {
+    "prompt": "为这款产品写一条活人感小红书广告。",
+    "expected": "xhs-human-ad"
+  },
+  {
+    "prompt": "请写一条候选人愿意看的活人感招聘广告。",
+    "expected": "recruitment-human-ad"
+  },
+  {
+    "prompt": "用 Agent Reach 做社媒搜索和触达调研。",
+    "expected": "reach-research"
+  },
+  {
+    "prompt": "为刚发布的 GitHub 项目准备开源宣发。",
+    "expected": "open-source-launch"
+  }
 ]

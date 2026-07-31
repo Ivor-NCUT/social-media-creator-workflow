@@ -1,7 +1,7 @@
 ---
 name: social-media-creator-workflow-multiplatform-distributor
 description: |
-  Adapt one content asset into platform-specific publishing packages without flattening platform differences. Use when the user mentions: 多平台分发, 一稿多发, 小红书适配, 平台发布.
+  Adapt one content asset into platform-specific publishing packages without flattening platform differences. Use when the user mentions: 多平台分发, 一稿多发, 小红书适配, 平台发布, 小红书标题, 标题优化.
 ---
 
 # Creator Multiplatform Distributor
@@ -20,9 +20,11 @@ description: |
 2. 为每个平台确认用户进入方式：推荐、搜索、关注或外部分享。
 3. 分别设计标题、开头/首屏、封面文案、正文、标签关键词和互动动作。
 4. 同一平台给直接价值、好奇、反常识等多个包装版本。
-5. 小红书场景按大词、中词、小词布局搜索意图，避免堆词。
-6. 检查标题和封面承诺是否由内容兑现。
-7. 输出发布前检查和发布后应记录的数据。
+5. 小红书标题候选按用户相关性、内容兑现、搜索意图、区分度、自然度和合规边界比较，
+   去掉只换同义词的重复版本；需要测试时一次只改变一个主要机制。
+6. 小红书场景按大词、中词、小词布局搜索意图，避免堆词。
+7. 检查标题和封面承诺是否由内容兑现。
+8. 输出发布前检查和发布后应记录的数据。
 
 ## Deliverables
 

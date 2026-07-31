@@ -1,0 +1,17 @@
+{
+  "skill_name": "social-media-creator-workflow-account-audit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "这是我的主页和最近 12 条笔记截图，帮我做账号体检，看看为什么不涨粉。",
+      "expected_output": "基于截图中的具体元素和可见数据给出账号级诊断、瓶颈置信度、证据缺口和少量优先动作，不虚构平台基准。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "帮我做竞品账号分析，直接告诉我照抄哪几条。",
+      "expected_output": "分析可迁移的结构与方法，同时明确身份、资源、历史流量等不可迁移项，不照抄竞品内容。",
+      "files": []
+    }
+  ]
+}

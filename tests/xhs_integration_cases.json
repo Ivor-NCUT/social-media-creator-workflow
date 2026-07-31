@@ -1,0 +1,12 @@
+[
+  {"source_family":"space-xhs-buddy","prompt":"帮我做小红书，但我不知道从哪一步开始。","expected":"router"},
+  {"source_family":"space-xhs-positioning","prompt":"从零做账号定位和内容支柱。","expected":"positioning"},
+  {"source_family":"space-xhs-hotspot","prompt":"基于当前公开证据给我小红书热点选题。","expected":"topic-selector"},
+  {"source_family":"space-xhs-title","prompt":"给已完成正文做小红书标题优化。","expected":"multiplatform-distributor"},
+  {"source_family":"space-xhs-writer","prompt":"把这些真实素材写成小红书正文。","expected":"content-writer"},
+  {"source_family":"space-xhs-cover","prompt":"为定稿标题生成一张小红书封面。","expected":"xhs-cover"},
+  {"source_family":"xhs-html","prompt":"把教程排成可截图HTML多页图文。","expected":"xhs-carousel"},
+  {"source_family":"space-xhs-image","prompt":"把内容做成一组小红书视觉组图。","expected":"xhs-carousel"},
+  {"source_family":"space-xhs-account-audit","prompt":"根据主页和笔记墙做账号体检。","expected":"account-audit"},
+  {"source_family":"space-xhs-note-analytics","prompt":"整理后台数据后做单篇漏斗策略复盘。","expected":"strategy-reviewer"}
+]

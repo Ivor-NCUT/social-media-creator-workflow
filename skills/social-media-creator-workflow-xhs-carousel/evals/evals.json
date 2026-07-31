@@ -1,0 +1,17 @@
+{
+  "skill_name": "social-media-creator-workflow-xhs-carousel",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "把这篇教程排成 8 张 3:4 小红书知识卡片，文字必须能精确修改，给我可截图HTML。",
+      "expected_output": "选择自包含 HTML 模式，先建立 8 页唯一任务，再生成可离线打开、逐页 3:4、无外链依赖的实际文件并检查文字与溢出。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "只用这张照片和标题给我做一张小红书首图。",
+      "expected_output": "识别为单张封面需求并路由到 xhs-cover，不擅自扩成多页组图。",
+      "files": []
+    }
+  ]
+}

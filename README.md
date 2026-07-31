@@ -4,9 +4,9 @@
 
 ### 从一个选题，到一套会持续变聪明的内容生产系统
 
-![Version](https://img.shields.io/badge/version-1.1.0-16a34a?style=for-the-badge)
-![Workflow](https://img.shields.io/badge/workflow-17_experts-0f766e?style=for-the-badge)
-![Skills](https://img.shields.io/badge/MOE-1_router_%2B_17_experts-2563eb?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.2.0-16a34a?style=for-the-badge)
+![Workflow](https://img.shields.io/badge/workflow-20_experts-0f766e?style=for-the-badge)
+![Skills](https://img.shields.io/badge/MOE-1_router_%2B_20_experts-2563eb?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-334155?style=for-the-badge)
 
 一个以创作者真实工作流为骨架的多专家 Agent Skill 项目。
@@ -74,7 +74,7 @@ SKILLS_HOME="$HOME/.agents/skills" node tools/install.mjs
 并标出缺失项和不可比数据。
 ```
 
-## 🧩 1 个主路由 + 17 个专家
+## 🧩 1 个主路由 + 20 个专家
 
 | 工序 | Skill | 主要交付 |
 |---|---|---|
@@ -96,6 +96,13 @@ SKILLS_HOME="$HOME/.agents/skills" node tools/install.mjs
 | 15 活人感招聘 | `social-media-creator-workflow-recruitment-human-ad` | 候选人视角招聘内容与投递动作 |
 | 16 触达调研 | `social-media-creator-workflow-reach-research` | 带来源和日期的公开平台调研 |
 | 17 开源宣发 | `social-media-creator-workflow-open-source-launch` | X、公众号、小红书成稿与事实表 |
+| 18 账号定位 | `social-media-creator-workflow-positioning` | 定位候选、定位句、内容支柱与验证计划 |
+| 19 小红书组图 | `social-media-creator-workflow-xhs-carousel` | 多页 HTML 或图片、页序和质量检查 |
+| 20 账号体检 | `social-media-creator-workflow-account-audit` | 账号级瓶颈、证据边界与优先动作 |
+
+`SpaceZephyr/creator-buddy` 的十个小红书入口经过冲突审计后只新增这三个结果。热点、
+标题、正文、封面和单篇数据能力分别进入现有选题/调研、分发、写作、封面和数据复盘
+事实源；总控入口不重复创建。
 
 ## 🎨 小红书封面能力与作者
 
@@ -141,7 +148,7 @@ python3 \
 
 ```text
 social-media-creator-workflow/
-├── skills/                 # 主路由与 17 个专家
+├── skills/                 # 主路由与 20 个专家
 ├── knowledge/
 │   ├── skill-packs/        # 每个专家专用方法
 │   ├── atoms/              # 可追溯方法原子
@@ -185,6 +192,10 @@ done
 小红书封面专家另行改编自公开项目
 [`Vivixiao980/xhs-cover-skill`](https://github.com/Vivixiao980/xhs-cover-skill)，遵循
 其上游 README 声明的 MIT 许可证和本仓库的第三方归属说明。
+
+[`SpaceZephyr/creator-buddy/xhs-Skills`](https://github.com/SpaceZephyr/creator-buddy/tree/main/xhs-Skills)
+在本次核验时没有仓库或子目录许可证，因此仅作为参考来源：本仓库不复制其原文、
+脚本、模板、素材或样式库，只保留独立表达的通用工作流和冲突裁决。
 
 ## 🗺️ 参与开发
 

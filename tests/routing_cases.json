@@ -66,5 +66,17 @@
   {
     "prompt": "为刚发布的 GitHub 项目准备开源宣发。",
     "expected": "open-source-launch"
+  },
+  {
+    "prompt": "帮我做账号定位，整理定位句和内容支柱。",
+    "expected": "positioning"
+  },
+  {
+    "prompt": "把这篇教程做成多页图文和可截图HTML。",
+    "expected": "xhs-carousel"
+  },
+  {
+    "prompt": "这是主页截图，帮我做账号体检。",
+    "expected": "account-audit"
   }
 ]

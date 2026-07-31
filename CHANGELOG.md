@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.2.0 - 2026-07-31
+
+- Integrated the ten `SpaceZephyr/creator-buddy` Xiaohongshu capability families through a
+  conflict audit instead of copying ten competing Skills.
+- Added account positioning, account audit, and multi-page Xiaohongshu carousel experts.
+- Enriched existing topic, research, writing, title packaging, cover, data, and strategy routes.
+- Recorded the unlicensed upstream as reference-only; no upstream prose, scripts, templates,
+  assets, or style registries are redistributed.
+
 ## 1.1.0 - 2026-07-28
 
 - Added a Xiaohongshu cover specialist adapted from

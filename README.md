@@ -5,9 +5,9 @@
 ### 从一个选题，到一套会持续变聪明的内容生产系统
 
 ![Version](https://img.shields.io/badge/version-1.1.0-16a34a?style=for-the-badge)
-![Workflow](https://img.shields.io/badge/workflow-13_steps-0f766e?style=for-the-badge)
-![Skills](https://img.shields.io/badge/MOE-1_router_%2B_13_experts-2563eb?style=for-the-badge)
-![License](https://img.shields.io/badge/license-Proprietary-334155?style=for-the-badge)
+![Workflow](https://img.shields.io/badge/workflow-17_experts-0f766e?style=for-the-badge)
+![Skills](https://img.shields.io/badge/MOE-1_router_%2B_17_experts-2563eb?style=for-the-badge)
+![License](https://img.shields.io/badge/license-MIT-334155?style=for-the-badge)
 
 一个以创作者真实工作流为骨架的多专家 Agent Skill 项目。
 用户只需记住一个入口，也可以从任意创作工序直接开始。
@@ -47,14 +47,12 @@ flowchart LR
 
 ### 安装
 
-该仓库目前为私有仓库，请先确认 `gh` 已登录有权限的 GitHub 账号：
-
 ```bash
-cd ~/.codex/skills
-gh repo clone Ivor-NCUT/social-media-creator-workflow
+SKILLS_HOME="$HOME/.agents/skills" node tools/install.mjs
 ```
 
-重启 Codex 或开启新会话后即可使用。
+安装器把整个仓库链接到 Skill 根目录，保证专家能继续读取共享知识；它不会覆盖真实
+目录或无关符号链接。默认目标为 `${CODEX_HOME:-~/.codex}/skills`。
 
 ### 只记一个入口
 
@@ -76,7 +74,7 @@ gh repo clone Ivor-NCUT/social-media-creator-workflow
 并标出缺失项和不可比数据。
 ```
 
-## 🧩 1 个主路由 + 13 个专家
+## 🧩 1 个主路由 + 17 个专家
 
 | 工序 | Skill | 主要交付 |
 |---|---|---|
@@ -94,6 +92,10 @@ gh repo clone Ivor-NCUT/social-media-creator-workflow
 | 11 数据整理 | `social-media-creator-workflow-data-organizer` | 标准化数据、派生指标、异常记录 |
 | 12 策略复盘 | `social-media-creator-workflow-strategy-reviewer` | 诊断、置信度、实验与行动计划 |
 | 13 资产沉淀 | `social-media-creator-workflow-asset-distiller` | 复用模板、证据、来源与使用边界 |
+| 14 活人感小红书广告 | `social-media-creator-workflow-xhs-human-ad` | 标题、正文、事实核对项与标签 |
+| 15 活人感招聘 | `social-media-creator-workflow-recruitment-human-ad` | 候选人视角招聘内容与投递动作 |
+| 16 触达调研 | `social-media-creator-workflow-reach-research` | 带来源和日期的公开平台调研 |
+| 17 开源宣发 | `social-media-creator-workflow-open-source-launch` | X、公众号、小红书成稿与事实表 |
 
 ## 🎨 小红书封面能力与作者
 
@@ -139,7 +141,7 @@ python3 \
 
 ```text
 social-media-creator-workflow/
-├── skills/                 # 主路由与 13 个专家
+├── skills/                 # 主路由与 17 个专家
 ├── knowledge/
 │   ├── skill-packs/        # 每个专家专用方法
 │   ├── atoms/              # 可追溯方法原子
@@ -148,7 +150,7 @@ social-media-creator-workflow/
 │   └── workflow-contract.md
 ├── docs/architecture.md
 ├── tests/
-└── tools/validate_project.py
+└── tools/                  # 验证器与安全安装器
 ```
 
 详细边界与数据流见 [`docs/architecture.md`](docs/architecture.md)。
@@ -173,8 +175,8 @@ done
 
 ## 🔐 来源与分发边界
 
-本项目的通用内容方法来自用户提供的两份材料，经原创抽象后写入 Skills。原始材料
-的公开再分发授权尚未确认，因此：
+本项目原创代码与文档使用 MIT。通用内容方法参考用户提供的两份材料；原始材料的
+公开再分发授权尚未确认，因此：
 
 - 不复制长段原文或独特品牌表达；
 - 平台规则、流量比例和红利期等时效性观点不作为永久事实；

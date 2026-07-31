@@ -32,3 +32,10 @@ BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR P
 NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
 DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Reference-only source: SpaceZephyr creator-buddy xhs-Skills
+
+The repository and `xhs-Skills` subtree did not declare a redistribution license when reviewed at
+commit `3185fe21f523feeb6599814629f581cb6d5f05b3`. No upstream prose, scripts, templates,
+assets, or style registries are included. The source is recorded only to disclose that its public
+capability map informed independently expressed workflow and routing decisions.

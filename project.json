@@ -6,6 +6,23 @@
   "license": "MIT",
   "experts": [
     {
+      "id": "positioning",
+      "name": "Creator Positioning",
+      "description": "Turn creator assets, audience, goals, and sustainable supply into an account positioning and initial content system.",
+      "triggers": [
+        "账号定位",
+        "起号定位",
+        "人设定位",
+        "内容支柱"
+      ],
+      "deliverables": [
+        "定位候选与取舍",
+        "定位句",
+        "账号识别要素",
+        "内容支柱与验证计划"
+      ]
+    },
+    {
       "id": "topic-selector",
       "name": "Creator Topic Selector",
       "description": "Turn creator context, audience needs, platform signals, and content goals into prioritized topics.",
@@ -149,7 +166,9 @@
         "多平台分发",
         "一稿多发",
         "小红书适配",
-        "平台发布"
+        "平台发布",
+        "小红书标题",
+        "标题优化"
       ],
       "deliverables": [
         "平台标题",
@@ -173,6 +192,40 @@
         "风格选择",
         "版式说明",
         "修改记录"
+      ]
+    },
+    {
+      "id": "xhs-carousel",
+      "name": "Xiaohongshu Carousel Creator",
+      "description": "Turn approved content into a consistent multi-page Xiaohongshu carousel using exact-text HTML or generated imagery.",
+      "triggers": [
+        "小红书组图",
+        "多页图文",
+        "3:4知识卡片",
+        "可截图HTML"
+      ],
+      "deliverables": [
+        "页级大纲",
+        "多页HTML或图片",
+        "视觉规则",
+        "质量检查结果"
+      ]
+    },
+    {
+      "id": "account-audit",
+      "name": "Creator Account Audit",
+      "description": "Diagnose an existing social account or compare it with peers using user-provided profile evidence and auditable data.",
+      "triggers": [
+        "账号体检",
+        "主页诊断",
+        "竞品账号分析",
+        "账号不涨粉"
+      ],
+      "deliverables": [
+        "证据边界",
+        "账号诊断",
+        "瓶颈与置信度",
+        "优先改动与接力工序"
       ]
     },
     {
@@ -341,6 +394,16 @@
       "owner": "external",
       "allowed_use": "Invoke when installed; do not vendor.",
       "notes": "Public search dependency only."
+    },
+    {
+      "id": "spacezephyr-creator-buddy-xhs-skills",
+      "title": "creator-buddy xhs-Skills",
+      "source_type": "public-reference",
+      "location": "https://github.com/SpaceZephyr/creator-buddy/tree/main/xhs-Skills",
+      "license": "unknown (no repository or subtree license found)",
+      "owner": "SpaceZephyr",
+      "allowed_use": "Reference-only independent abstraction; do not copy prose, scripts, templates, assets, or style registries.",
+      "notes": "Reviewed at commit 3185fe21f523feeb6599814629f581cb6d5f05b3; ten capability families mapped into three new experts and existing routes."
     }
   ]
 }

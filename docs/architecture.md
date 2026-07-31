@@ -7,6 +7,7 @@
 
 ## 专家地图
 
+- `social-media-creator-workflow-positioning`: Turn creator assets, audience, goals, and sustainable supply into an account positioning and initial content system.
 - `social-media-creator-workflow-topic-selector`: Turn creator context, audience needs, platform signals, and content goals into prioritized topics.
 - `social-media-creator-workflow-outline-builder`: Turn an accepted topic into a shootable and writable content outline with multiple opening options.
 - `social-media-creator-workflow-scene-designer`: Translate an outline into scenes, shots, props, actions, and visual information.
@@ -17,6 +18,8 @@
 - `social-media-creator-workflow-content-reviewer`: Review a finished or near-finished content piece and route revisions to the correct production stage.
 - `social-media-creator-workflow-multiplatform-distributor`: Adapt one content asset into platform-specific publishing packages without flattening platform differences.
 - `social-media-creator-workflow-xhs-cover`: Generate, edit, or learn a Xiaohongshu cover style with Codex image generation and 18 presets adapted from Vivi's xhs-cover-skill.
+- `social-media-creator-workflow-xhs-carousel`: Turn approved content into a consistent multi-page Xiaohongshu carousel using exact-text HTML or generated imagery.
+- `social-media-creator-workflow-account-audit`: Diagnose an existing social account or compare it with peers using user-provided profile evidence and auditable data.
 - `social-media-creator-workflow-data-organizer`: Normalize creator-provided screenshots or CSV exports into a comparable, auditable content dataset.
 - `social-media-creator-workflow-strategy-reviewer`: Turn normalized performance data into evidence-based content strategy and testable next actions.
 - `social-media-creator-workflow-asset-distiller`: Convert completed work and validated lessons into reusable creator assets with provenance and usage limits.
@@ -32,6 +35,7 @@ Skill 与对应的 `knowledge/skill-packs/`，避免路由器逐渐膨胀。
 
 专家拥有一个清楚结果。相邻工序使用稳定裁决：
 
+- 长期账号价值与内容支柱 → 账号定位；下一条具体讲什么 → 定选题；
 - 选题未确定 → 定选题；选题已定、需要结构 → 出提纲；
 - 需要内容逻辑 → 出提纲；需要镜头和地点 → 布场景；
 - 需要拍摄方案 → 布场景；准备开拍或补拍 → 引导拍摄；
@@ -40,11 +44,31 @@ Skill 与对应的 `knowledge/skill-packs/`，避免路由器逐渐膨胀。
 - 需要能否发布判断 → 审片；需要实际修改 → 回退对应工序；
 - 需要标题、正文、标签等发布包装 → 多平台分发；需要实际生成或修改小红书封面
   图片 → 小红书封面；
+- 单张首图 → 小红书封面；多页知识卡片、组图或可截图 HTML → 小红书组图；
+- 主页和多篇内容形成的账号级瓶颈 → 账号体检；单篇/批量数据漏斗 → 数据整理与策略复盘；
 - 需要清洗数字 → 数据整理；需要运营判断 → 策略复盘；
 - 需要下一步行动 → 策略复盘；需要长期复用 → 资产沉淀。
 - 普通正文 → 内容写作；商业小红书广告 → 活人感小红书广告；
 - 招聘传播 → 活人感招聘；候选人搜索和数据库操作 → 外部招聘工具；
 - 需要公开证据 → 触达调研；已有验证事实的开源发布 → 开源项目宣发。
+
+## creator-buddy xhs-Skills 冲突裁决
+
+| 上游入口 | 本项目落点 | 裁决 |
+|---|---|---|
+| `space-xhs-buddy` | 主路由 | 纯重复，不新增总控 |
+| `space-xhs-positioning` | `positioning` | 独立账号级结果，新增专家 |
+| `space-xhs-hotspot` | `topic-selector` + `reach-research` | 研究与选题分层，不新增热点入口 |
+| `space-xhs-title` | `multiplatform-distributor` | 标题属于发布包装，不抢正文路由 |
+| `space-xhs-writer` | `content-writer` + `xhs-human-ad` | 普通内容与商业内容继续隔离 |
+| `space-xhs-cover` | `xhs-cover` | 现有入口已覆盖，补测试纪律 |
+| `xhs-html` + `space-xhs-image` | `xhs-carousel` | 合并为精确文字与生成图两种模式 |
+| `space-xhs-account-audit` | `account-audit` | 独立账号级诊断，新增专家 |
+| `space-xhs-note-analytics` | `data-organizer` + `strategy-reviewer` | 事实整理与策略归因保持分离 |
+
+上游仓库与子目录未声明许可证。本项目只记录 commit
+`3185fe21f523feeb6599814629f581cb6d5f05b3` 的参考关系，不复制其文字、代码、
+模板、素材、样式注册表或第三方数据接入。
 
 ## 数据流
 
@@ -112,3 +136,4 @@ Codex 会递归发现 `skills/*/SKILL.md`，共享知识的相对路径保持有
 仓库原创内容使用 MIT。两份用户材料的公开再分发权未确认，因此只保留来源登记和
 抽象规则，不分发原文或独特表达；改编的小红书封面部分继续遵循
 `THIRD_PARTY_NOTICES.md` 中的 MIT 归属。平台时效性观点必须带来源日期与不确定性。
+`SpaceZephyr/creator-buddy/xhs-Skills` 同样按无许可参考来源处理，不进入 MIT 再分发物。

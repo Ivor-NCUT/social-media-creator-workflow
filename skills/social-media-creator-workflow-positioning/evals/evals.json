@@ -1,0 +1,17 @@
+{
+  "skill_name": "social-media-creator-workflow-positioning",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我准备做一个小红书账号，帮我做起号定位和内容支柱。",
+      "expected_output": "基于真实资源、目标受众、经营目标和持续供给给出候选定位、取舍、定位句、内容支柱与最小验证计划，不承诺涨粉结果。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我的账号发了半年没起色，是不是应该直接换定位？",
+      "expected_output": "不直接推倒定位；先区分定位设计与既有账号表现，缺少账号证据时建议进入 account-audit。",
+      "files": []
+    }
+  ]
+}

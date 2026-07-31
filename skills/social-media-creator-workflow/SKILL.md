@@ -14,6 +14,7 @@ description: |
 
 | Expert | Skill | Owned job | Trigger signals |
 |---|---|---|---|
+| Creator Positioning | `social-media-creator-workflow-positioning` | Turn creator assets, audience, goals, and sustainable supply into an account positioning and initial content system. | 账号定位、起号定位、人设定位、内容支柱 |
 | Creator Topic Selector | `social-media-creator-workflow-topic-selector` | Turn creator context, audience needs, platform signals, and content goals into prioritized topics. | 定选题、选题规划、下一条拍什么、内容选题 |
 | Creator Outline Builder | `social-media-creator-workflow-outline-builder` | Turn an accepted topic into a shootable and writable content outline with multiple opening options. | 出提纲、内容结构、视频大纲、多个开头 |
 | Creator Scene Designer | `social-media-creator-workflow-scene-designer` | Translate an outline into scenes, shots, props, actions, and visual information. | 布场景、镜头设计、拍摄场景、分镜 |
@@ -24,6 +25,8 @@ description: |
 | Creator Content Reviewer | `social-media-creator-workflow-content-reviewer` | Review a finished or near-finished content piece and route revisions to the correct production stage. | 审片、内容审核、成片复查、发布前检查 |
 | Creator Multiplatform Distributor | `social-media-creator-workflow-multiplatform-distributor` | Adapt one content asset into platform-specific publishing packages without flattening platform differences. | 多平台分发、一稿多发、小红书适配、平台发布 |
 | Xiaohongshu Cover Creator | `social-media-creator-workflow-xhs-cover` | Generate, edit, or learn a Xiaohongshu cover style with Codex image generation and 18 presets adapted from Vivi's xhs-cover-skill. | 小红书封面、xhs封面、生成封面、修改封面 |
+| Xiaohongshu Carousel Creator | `social-media-creator-workflow-xhs-carousel` | Turn approved content into a consistent multi-page Xiaohongshu carousel using exact-text HTML or generated imagery. | 小红书组图、多页图文、3:4知识卡片、可截图HTML |
+| Creator Account Audit | `social-media-creator-workflow-account-audit` | Diagnose an existing social account or compare it with peers using user-provided profile evidence and auditable data. | 账号体检、主页诊断、竞品账号分析、账号不涨粉 |
 | Creator Data Organizer | `social-media-creator-workflow-data-organizer` | Normalize creator-provided screenshots or CSV exports into a comparable, auditable content dataset. | 数据整理、后台截图、CSV分析、运营数据清洗 |
 | Creator Strategy Reviewer | `social-media-creator-workflow-strategy-reviewer` | Turn normalized performance data into evidence-based content strategy and testable next actions. | 策略复盘、运营建议、数据复盘、下一步怎么做 |
 | Creator Asset Distiller | `social-media-creator-workflow-asset-distiller` | Convert completed work and validated lessons into reusable creator assets with provenance and usage limits. | 内容资产沉淀、方法复用、素材库、经验沉淀 |
@@ -45,6 +48,8 @@ description: |
 
 ## Adjacent-stage tie breakers
 
+- 用户还在定义“账号长期服务谁、持续提供什么”时用 `positioning`；定位已确定、
+  只决定下一条讲什么时用 `topic-selector`。
 - 用户还在决定“讲什么”时用 `topic-selector`；选题已经确定、要组织结构时用
   `outline-builder`。
 - 用户要的是内容逻辑和段落时用 `outline-builder`；要的是地点、镜头、动作和
@@ -61,6 +66,10 @@ description: |
   时用 `data-organizer`。
 - 用户要标题、正文、标签等整套发布包装时用 `multiplatform-distributor`；用户
   要直接生成、修改或学习小红书封面风格时用 `xhs-cover`。
+- 用户只要一张首图时用 `xhs-cover`；已确认内容要拆成多页图文、知识卡片或可截图
+  HTML 时用 `xhs-carousel`。
+- 用户给主页、内容墙或竞品账号，要判断账号级瓶颈时用 `account-audit`；用户给单篇
+  或一批后台数据，要做漏斗归因时先 `data-organizer`，再 `strategy-reviewer`。
 - 用户要清洗和统一数据时用 `data-organizer`；用户要基于数据做决策时用
   `strategy-reviewer`。
 - 用户要下一轮运营动作时用 `strategy-reviewer`；用户要把经验写入可复用模板和
@@ -73,6 +82,8 @@ description: |
   对应写作专家。
 - 开源仓库、版本和验证事实已确认后用 `open-source-launch`；未发布的产品构想不
   冒充已发布项目。
+- 单独要小红书标题候选、评分或 A/B 包装时用 `multiplatform-distributor`；正文结构
+  和事实尚未成立时先 `content-writer`，不能用标题替代内容。
 
 ## Workflow feedback loops
 
@@ -91,6 +102,8 @@ description: |
 - AI 可以按用户要求完成头脑风暴、初稿、终稿或完整交付，不人为限制使用阶段。
 - 平台规则、流量比例、红利期和发布时间属于时效性观点；没有当前证据时标明来源
   日期和不确定性，不把它们写成永久事实。
+- `SpaceZephyr/creator-buddy` 的 `xhs-Skills` 未声明可再分发许可证；只使用已独立
+  表达的抽象工作流，不复制其原文、脚本、模板、资产或样式库。
 
 ## Source grounding
 

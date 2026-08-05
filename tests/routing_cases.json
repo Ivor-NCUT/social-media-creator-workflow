@@ -20,6 +20,10 @@
     "expected": "content-writer"
   },
   {
+    "prompt": "把采访和简历写成一篇公众号候选人推荐信。",
+    "expected": "content-writer"
+  },
+  {
     "prompt": "这是带时间码的转写，请做粗剪时间线。",
     "expected": "rough-cut-planner"
   },
@@ -78,5 +82,13 @@
   {
     "prompt": "这是主页截图，帮我做账号体检。",
     "expected": "account-audit"
+  },
+  {
+    "prompt": "帮我做评论回复和置顶评论。",
+    "expected": "community-manager"
+  },
+  {
+    "prompt": "设计内容到私信的转化路径。",
+    "expected": "conversion-path"
   }
 ]

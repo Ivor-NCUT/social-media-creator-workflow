@@ -13,7 +13,11 @@
         "账号定位",
         "起号定位",
         "人设定位",
-        "内容支柱"
+        "内容支柱",
+        "母题",
+        "栏目",
+        "杂志感",
+        "选题库"
       ],
       "deliverables": [
         "定位候选与取舍",
@@ -30,7 +34,11 @@
         "定选题",
         "选题规划",
         "下一条拍什么",
-        "内容选题"
+        "内容选题",
+        "发布日历",
+        "7天选题",
+        "14天选题",
+        "30天选题"
       ],
       "deliverables": [
         "选题候选",
@@ -98,10 +106,14 @@
         "出文章",
         "写口播稿",
         "写旁白",
-        "写图文"
+        "写图文",
+        "公众号长文",
+        "候选人推荐信"
       ],
       "deliverables": [
         "完整正文",
+        "公众号长文",
+        "候选人推荐信",
         "口播稿",
         "旁白",
         "字幕稿"
@@ -218,6 +230,8 @@
       "triggers": [
         "账号体检",
         "主页诊断",
+        "简介改写",
+        "置顶诊断",
         "竞品账号分析",
         "账号不涨粉"
       ],
@@ -342,6 +356,41 @@
         "小红书笔记",
         "事实核对表"
       ]
+    },
+    {
+      "id": "community-manager",
+      "name": "Creator Community Manager",
+      "description": "Turn real social comments into natural, boundary-aware replies and pinned-comment options that continue useful conversation.",
+      "triggers": [
+        "评论回复",
+        "置顶评论",
+        "评论区运营",
+        "处理质疑"
+      ],
+      "deliverables": [
+        "推荐与备选回复",
+        "置顶评论",
+        "风险提醒",
+        "后续互动动作"
+      ]
+    },
+    {
+      "id": "conversion-path",
+      "name": "Creator Conversion Path",
+      "description": "Design an evidence-grounded path from social content through profile, comments, messages, trial, booking, or purchase.",
+      "triggers": [
+        "转化路径",
+        "内容到私信",
+        "主页承接",
+        "私信筛选",
+        "内容成交"
+      ],
+      "deliverables": [
+        "当前路径与断点",
+        "内容与主页分工",
+        "评论和私信动作",
+        "验证指标"
+      ]
     }
   ],
   "sources": [
@@ -404,6 +453,26 @@
       "owner": "SpaceZephyr",
       "allowed_use": "Reference-only independent abstraction; do not copy prose, scripts, templates, assets, or style registries.",
       "notes": "Reviewed at commit 3185fe21f523feeb6599814629f581cb6d5f05b3; ten capability families mapped into three new experts and existing routes."
+    },
+    {
+      "id": "kkkkhazix-human-writing",
+      "title": "human-writing",
+      "source_type": "open-source-skill",
+      "location": "https://github.com/KKKKhazix/human-writing",
+      "license": "MIT",
+      "owner": "Human Writing Skill contributors",
+      "allowed_use": "Adapt material sufficiency, reality/fiction boundaries, paragraph progression, Chinese rhythm, and revision checks with attribution.",
+      "notes": "Reviewed at commit 22d20b672680e4c1a34e75aec550ff48d622ca59; strict punctuation and phrase bans remain optional and are not global project rules."
+    },
+    {
+      "id": "nihe0909-xiaohongshu-ai-workbench",
+      "title": "xiaohongshu-ai-workbench",
+      "source_type": "open-source-skill-suite",
+      "location": "https://github.com/nihe0909/xiaohongshu-ai-workbench",
+      "license": "MIT",
+      "owner": "王梦珂",
+      "allowed_use": "Adapt profile, editorial system, topic planning, title, community reply, and conversion-path workflows with attribution.",
+      "notes": "Reviewed at commit 464ccec036139f0d9bd2b31af9c7b75296f3161a; parent router is not copied and promotional assets are not vendored."
     }
   ]
 }

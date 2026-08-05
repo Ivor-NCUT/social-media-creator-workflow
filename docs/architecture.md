@@ -27,6 +27,8 @@
 - `social-media-creator-workflow-recruitment-human-ad`: Write candidate-first recruitment content.
 - `social-media-creator-workflow-reach-research`: Research dated public platform signals and reach paths.
 - `social-media-creator-workflow-open-source-launch`: Produce a verified cross-platform open-source launch package.
+- `social-media-creator-workflow-community-manager`: Produce natural, boundary-aware replies and pinned comments from real community input.
+- `social-media-creator-workflow-conversion-path`: Design the evidence-grounded path from content to profile, message, trial, booking, or purchase.
 
 ## 责任边界
 
@@ -51,6 +53,25 @@ Skill 与对应的 `knowledge/skill-packs/`，避免路由器逐渐膨胀。
 - 普通正文 → 内容写作；商业小红书广告 → 活人感小红书广告；
 - 招聘传播 → 活人感招聘；候选人搜索和数据库操作 → 外部招聘工具；
 - 需要公开证据 → 触达调研；已有验证事实的开源发布 → 开源项目宣发。
+- 具体评论回复或置顶 → 社区运营；评论区在完整业务路径中的职责 → 转化路径；
+- 简介、主页第一眼和置顶表达 → 账号体检；内容到主页、私信、体验或购买 → 转化路径；
+- 母题、栏目与长期选题库 → 账号定位；周期发布日历 → 定选题。
+
+## human-writing 与小红书 AI 工作台冲突裁决
+
+| 上游入口 | 本项目落点 | 裁决 |
+|---|---|---|
+| `human-writing` | `content-writer` | 高度重叠，只吸收材料门槛、现实/虚构边界、段落推进和改稿；固定标点禁令不全局化 |
+| `xiaohongshu-suite` | 主路由 | 父路由重复，不新增总控 |
+| `xiaohongshu-profile` | `account-audit` | 主页诊断与简介改写并入账号体检 |
+| `xiaohongshu-magazine` | `positioning` | 母题与栏目属于账号战略 |
+| `xiaohongshu-topic-planner` | `topic-selector` | 发布日历属于选题结果 |
+| `xiaohongshu-title` | `multiplatform-distributor` | 标题继续属于发布包装 |
+| `xiaohongshu-comment-reply` | `community-manager` | 现有专家无稳定归属，新增窄专家 |
+| `xiaohongshu-conversion-path` | `conversion-path` | 跨内容、主页、评论和私信的独立结果，新增窄专家 |
+
+两套来源均为 MIT。本项目固定核验 commit `22d20b672680e4c1a34e75aec550ff48d622ca59`
+和 `464ccec036139f0d9bd2b31af9c7b75296f3161a`，不复制推广材料和 `.skill` 打包制品。
 
 ## creator-buddy xhs-Skills 冲突裁决
 
@@ -134,6 +155,6 @@ Codex 会递归发现 `skills/*/SKILL.md`，共享知识的相对路径保持有
 ## 来源与许可证
 
 仓库原创内容使用 MIT。两份用户材料的公开再分发权未确认，因此只保留来源登记和
-抽象规则，不分发原文或独特表达；改编的小红书封面部分继续遵循
-`THIRD_PARTY_NOTICES.md` 中的 MIT 归属。平台时效性观点必须带来源日期与不确定性。
+抽象规则，不分发原文或独特表达；MIT 来源的改编继续遵循
+`THIRD_PARTY_NOTICES.md` 中的归属。平台时效性观点必须带来源日期与不确定性。
 `SpaceZephyr/creator-buddy/xhs-Skills` 同样按无许可参考来源处理，不进入 MIT 再分发物。

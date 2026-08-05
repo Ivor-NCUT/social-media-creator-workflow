@@ -4,9 +4,9 @@
 
 ### 从一个选题，到一套会持续变聪明的内容生产系统
 
-![Version](https://img.shields.io/badge/version-1.2.0-16a34a?style=for-the-badge)
-![Workflow](https://img.shields.io/badge/workflow-20_experts-0f766e?style=for-the-badge)
-![Skills](https://img.shields.io/badge/MOE-1_router_%2B_20_experts-2563eb?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.3.0-16a34a?style=for-the-badge)
+![Workflow](https://img.shields.io/badge/workflow-22_experts-0f766e?style=for-the-badge)
+![Skills](https://img.shields.io/badge/MOE-1_router_%2B_22_experts-2563eb?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-334155?style=for-the-badge)
 
 一个以创作者真实工作流为骨架的多专家 Agent Skill 项目。
@@ -30,6 +30,8 @@ flowchart LR
     F --> G[精剪]
     G --> H[审片]
     H --> I[多平台分发]
+    I --> J[评论区运营]
+    I --> N[转化路径]
     I -. 小红书内容 .-> X[生成小红书封面]
     I --> K[数据整理]
     X --> K
@@ -74,7 +76,7 @@ SKILLS_HOME="$HOME/.agents/skills" node tools/install.mjs
 并标出缺失项和不可比数据。
 ```
 
-## 🧩 1 个主路由 + 20 个专家
+## 🧩 1 个主路由 + 22 个专家
 
 | 工序 | Skill | 主要交付 |
 |---|---|---|
@@ -99,10 +101,16 @@ SKILLS_HOME="$HOME/.agents/skills" node tools/install.mjs
 | 18 账号定位 | `social-media-creator-workflow-positioning` | 定位候选、定位句、内容支柱与验证计划 |
 | 19 小红书组图 | `social-media-creator-workflow-xhs-carousel` | 多页 HTML 或图片、页序和质量检查 |
 | 20 账号体检 | `social-media-creator-workflow-account-audit` | 账号级瓶颈、证据边界与优先动作 |
+| 21 社区运营 | `social-media-creator-workflow-community-manager` | 评论回复、置顶评论、边界与互动动作 |
+| 22 转化路径 | `social-media-creator-workflow-conversion-path` | 内容、主页、评论、私信与行动承接 |
 
 `SpaceZephyr/creator-buddy` 的十个小红书入口经过冲突审计后只新增这三个结果。热点、
 标题、正文、封面和单篇数据能力分别进入现有选题/调研、分发、写作、封面和数据复盘
 事实源；总控入口不重复创建。
+
+`human-writing` 与《小红书运营手册 · AI工作台》也经过相同的冲突审计。通用写作方法
+进入内容写作；主页、母题栏目、选题日历和标题进入现有专家；只新增社区运营与转化
+路径两个此前没有稳定归属的结果。
 
 ## 🎨 小红书封面能力与作者
 
@@ -148,7 +156,7 @@ python3 \
 
 ```text
 social-media-creator-workflow/
-├── skills/                 # 主路由与 20 个专家
+├── skills/                 # 主路由与 22 个专家
 ├── knowledge/
 │   ├── skill-packs/        # 每个专家专用方法
 │   ├── atoms/              # 可追溯方法原子
@@ -196,6 +204,10 @@ done
 [`SpaceZephyr/creator-buddy/xhs-Skills`](https://github.com/SpaceZephyr/creator-buddy/tree/main/xhs-Skills)
 在本次核验时没有仓库或子目录许可证，因此仅作为参考来源：本仓库不复制其原文、
 脚本、模板、素材或样式库，只保留独立表达的通用工作流和冲突裁决。
+
+[`KKKKhazix/human-writing`](https://github.com/KKKKhazix/human-writing) 与
+[`nihe0909/xiaohongshu-ai-workbench`](https://github.com/nihe0909/xiaohongshu-ai-workbench)
+均按 MIT 许可改编并保留版本归属；没有复制作者身份、推广材料或打包制品。
 
 ## 🗺️ 参与开发
 

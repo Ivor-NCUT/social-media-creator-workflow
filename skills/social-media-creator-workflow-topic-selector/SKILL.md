@@ -1,7 +1,7 @@
 ---
 name: social-media-creator-workflow-topic-selector
 description: |
-  Turn creator context, audience needs, platform signals, and content goals into prioritized topics. Use when the user mentions: 定选题, 选题规划, 下一条拍什么, 内容选题.
+  Turn creator context, audience needs, platform signals, and content goals into prioritized topics or publishing calendars. Use when the user mentions: 定选题, 选题规划, 下一条拍什么, 内容选题, 发布日历, 7天选题, 14天选题, 30天选题.
 ---
 
 # Creator Topic Selector
@@ -24,6 +24,8 @@ description: |
 4. 标记每条选题是流量型、人设型、转化型，或其明确组合。
 5. 判断适合单条还是系列；系列必须说明延续机制。
 6. 给出优先顺序和放弃理由，让用户能直接选定下一条内容。
+7. 用户明确要周期计划时，把已确认母题/栏目或选题池排成 7、14 或 30 天日历；每条
+   标注内容功能、角度、所需素材和系列关系，不虚构发布频率或平台最佳时间。
 
 ## One-question rule
 
@@ -41,6 +43,7 @@ description: |
 - 选题评分
 - 内容使命
 - 系列归属
+- 需要时的发布日历
 
 使用以下表格：
 

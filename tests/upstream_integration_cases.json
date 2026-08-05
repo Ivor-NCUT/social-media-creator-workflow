@@ -1,0 +1,10 @@
+[
+  {"source_family":"human-writing","prompt":"根据这些真实材料写一篇公众号长文，材料不够时不要编。","expected":"content-writer"},
+  {"source_family":"xhs-suite","prompt":"我不知道小红书账号应该先改主页、做选题还是设计转化。","expected":"router"},
+  {"source_family":"xhs-profile","prompt":"根据主页截图做账号体检，并给我改五版简介。","expected":"account-audit"},
+  {"source_family":"xhs-magazine","prompt":"把账号当一本杂志，定母题、栏目和可持续选题库。","expected":"positioning"},
+  {"source_family":"xhs-topic-planner","prompt":"根据已确认定位做一个 14 天选题规划和发布日历。","expected":"topic-selector"},
+  {"source_family":"xhs-title","prompt":"为定稿的小红书正文生成并诊断标题。","expected":"multiplatform-distributor"},
+  {"source_family":"xhs-comment-reply","prompt":"帮我回复小红书评论并准备置顶评论。","expected":"community-manager"},
+  {"source_family":"xhs-conversion-path","prompt":"设计小红书内容到主页、私信和体验的转化路径。","expected":"conversion-path"}
+]

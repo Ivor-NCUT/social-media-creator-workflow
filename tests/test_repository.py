@@ -21,7 +21,7 @@ SKILL_NAME_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 class RepositoryTest(unittest.TestCase):
     def test_expected_expert_count_and_names(self) -> None:
         experts = PROJECT["experts"]
-        self.assertEqual(len(experts), 20)
+        self.assertEqual(len(experts), 22)
         ids = [expert["id"] for expert in experts]
         self.assertEqual(len(ids), len(set(ids)))
         self.assertTrue(all(SKILL_NAME_RE.fullmatch(expert_id) for expert_id in ids))
@@ -70,6 +70,17 @@ class RepositoryTest(unittest.TestCase):
         experts = {expert["id"] for expert in PROJECT["experts"]}
         self.assertEqual(len(cases), 10)
         self.assertEqual(len({case["source_family"] for case in cases}), 10)
+        self.assertTrue(
+            all(case["expected"] in experts or case["expected"] == "router" for case in cases)
+        )
+
+    def test_new_upstreams_have_conflict_decisions(self) -> None:
+        cases = json.loads(
+            (ROOT / "tests" / "upstream_integration_cases.json").read_text(encoding="utf-8")
+        )
+        experts = {expert["id"] for expert in PROJECT["experts"]}
+        self.assertEqual(len(cases), 8)
+        self.assertEqual(len({case["source_family"] for case in cases}), 8)
         self.assertTrue(
             all(case["expected"] in experts or case["expected"] == "router" for case in cases)
         )

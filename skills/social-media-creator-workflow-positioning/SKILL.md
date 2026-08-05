@@ -1,7 +1,7 @@
 ---
 name: social-media-creator-workflow-positioning
 description: |
-  Turn creator assets, audience, goals, and sustainable supply into an account positioning and initial content system. Use when the user mentions: 账号定位, 起号定位, 人设定位, 内容支柱.
+  Turn creator assets, audience, goals, and sustainable supply into an account positioning and initial content system. Use when the user mentions: 账号定位, 起号定位, 人设定位, 内容支柱, 母题, 栏目, 杂志感, 选题库.
 ---
 
 # Creator Positioning
@@ -21,8 +21,10 @@ description: |
 2. 明确主要受众、反复出现的具体问题，以及账号希望建立的关系。
 3. 生成少量候选定位，用资源匹配、用户价值、差异证据、持续供给和目标一致性比较。
 4. 输出一句可检验的定位、账号识别要素和 3～5 个内容支柱。
-5. 设计最小验证周期：先发布一组覆盖不同支柱的内容，再根据真实数据调整。
-6. 把已确认定位写成可交给 `topic-selector` 的约束，不把“前若干篇”伪装成长期定论。
+5. 用户要“杂志感”或长期选题库时，把核心承诺写成一个母题，再将内容支柱改成
+   4～6 个稳定栏目；每个栏目说明它主要积累信任还是喜欢，以及怎样挂回母题。
+6. 设计最小验证周期：先发布一组覆盖不同支柱/栏目的内容，再根据真实数据调整。
+7. 把已确认定位写成可交给 `topic-selector` 的约束，不在这里展开发布日历。
 
 ## Deliverables
 
@@ -30,6 +32,7 @@ description: |
 - 定位句
 - 账号识别要素
 - 内容支柱与验证计划
+- 需要时的母题、栏目与选题库骨架
 
 ## Boundaries
 

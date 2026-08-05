@@ -1,0 +1,12 @@
+{
+  "skill_name": "social-media-creator-workflow-content-writer",
+  "pairs": [
+    {
+      "id": "candidate-evidence-coverage-001",
+      "prompt": "人物有一条传奇增长故事，也有一段真实 AI Native 公司落地经历，请写候选人推荐信。",
+      "preferred": "用传奇故事建立主线，同时保留 AI Native 公司经历，并写清前沿工具进入真实业务流程和团队交付的证据链。",
+      "rejected": "只写传奇故事，把公司经历压缩成‘去过 AI 创业公司’，再罗列 Claude Code、Codex 等工具名。",
+      "reason": "目标岗位判断需要高信号职业证据，流畅叙事不能代替事实覆盖。"
+    }
+  ]
+}

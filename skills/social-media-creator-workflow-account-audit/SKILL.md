@@ -1,7 +1,7 @@
 ---
 name: social-media-creator-workflow-account-audit
 description: |
-  Diagnose an existing social account or compare it with peers using user-provided profile evidence and auditable data. Use when the user mentions: 账号体检, 主页诊断, 竞品账号分析, 账号不涨粉.
+  Diagnose an existing social account or profile and rewrite its public-facing bio from user-provided evidence. Use when the user mentions: 账号体检, 主页诊断, 简介改写, 置顶诊断, 竞品账号分析, 账号不涨粉.
 ---
 
 # Creator Account Audit
@@ -23,6 +23,8 @@ description: |
 4. 先定位最可能的瓶颈，再列支持、反对和缺失证据，不平均优化所有维度。
 5. 对标时区分可迁移方法与不可迁移的身份、资源、历史流量和预算。
 6. 给 3～5 个按影响排序的改动，并把每项路由到定位、选题、分发、封面或策略复盘。
+7. 用户只要主页简介时，检查“你是谁、帮谁、解决什么、凭什么可信、下一步做什么”，
+   然后给少量不同侧重的简介版本，不输出整套账号审计。
 
 ## Deliverables
 
@@ -30,6 +32,7 @@ description: |
 - 账号诊断
 - 瓶颈与置信度
 - 优先改动与接力工序
+- 需要时的简介与置顶改写
 
 ## Boundaries
 

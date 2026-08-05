@@ -1,5 +1,31 @@
 # Changelog
 
+## 1.3.0 - 2026-08-05
+
+- Integrated `KKKKhazix/human-writing` into the existing content writer with material sufficiency,
+  reality/fiction boundaries, paragraph progression, Chinese rhythm, and post-draft revision.
+- Integrated the Xiaohongshu workbench through conflict-aware routing instead of copying its
+  parent router or duplicating profile, positioning, topic, and title experts.
+- Added narrow community-management and conversion-path experts for the two uncovered outcomes.
+- Recorded exact MIT-licensed upstream revisions and added routing regression coverage.
+
+## 1.2.2 - 2026-08-02
+
+- Added a high-signal experience coverage gate for candidate recommendation stories so a strong
+  narrative cannot silently omit job-relevant evidence.
+- Added a concrete proof chain for frontier AI capability: tool, real workflow, team or user,
+  and delivered result.
+- Recorded the anonymized user edit trace and a regression eval for AI Native company experience.
+
+## 1.2.1 - 2026-08-02
+
+- Integrated the MIT-licensed `KKKKhazix/khazix-skills/khazix-writer` methodology into the
+  existing content-writer instead of adding an overlapping expert.
+- Added a source-grounded public-account character story and candidate recommendation mode with
+  HKR topic checking, scene-led narrative, wave pacing, mainline callbacks, and four-layer review.
+- Preserved the project's author identity and content style guard; upstream catchphrases,
+  signature, contact details, and fixed footer are not copied.
+
 ## 1.2.0 - 2026-07-31
 
 - Integrated the ten `SpaceZephyr/creator-buddy` Xiaohongshu capability families through a

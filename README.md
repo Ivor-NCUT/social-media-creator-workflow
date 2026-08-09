@@ -4,7 +4,7 @@
 
 ### 从一个选题，到一套会持续变聪明的内容生产系统
 
-![Version](https://img.shields.io/badge/version-1.3.0-16a34a?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.4.0-16a34a?style=for-the-badge)
 ![Workflow](https://img.shields.io/badge/workflow-22_experts-0f766e?style=for-the-badge)
 ![Skills](https://img.shields.io/badge/MOE-1_router_%2B_22_experts-2563eb?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-334155?style=for-the-badge)

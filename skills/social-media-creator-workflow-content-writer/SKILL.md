@@ -1,7 +1,7 @@
 ---
 name: social-media-creator-workflow-content-writer
 description: |
-  Turn topics, outlines, interviews, and footage notes into scripts, narration, posts, public-account longform, candidate recommendation stories, or publishable articles. Use when the user mentions: 出文章, 写口播稿, 写旁白, 写图文, 公众号长文, 候选人推荐信.
+  Turn topics, outlines, interviews, and footage notes into scripts, narration, posts, public-account longform, candidate recommendation stories, or publishable articles. Use when the user mentions: 出文章, 写口播稿, 写旁白, 写图文, 公众号长文, 候选人推荐信, 一起打磨, 逐段写, 先探索.
 ---
 
 # Creator Content Writer
@@ -18,8 +18,9 @@ description: |
 ## Workflow
 
 1. 确认载体：口播稿、旁白、图文、长文、字幕稿或其他明确格式。
-2. 确认阶段：头脑风暴、初稿、改稿或可发布终稿；用户没说时给最接近其请求的完整
-   成果，不反复确认。
+2. 确认阶段与模式：头脑风暴、初稿、改稿或可发布终稿。只有用户明确要求“一起
+   打磨”“逐段写”“先探索”等协作过程时，才启用 knowledge pack 的「协作共写」；
+   其他请求直接交付最接近目标的完整成果，不反复确认。
 3. 建立事实清单与不可编造项，保留用户原立场。
 4. 先判断作品对现实作出什么承诺。现实稿检查材料是否足以支撑目标篇幅；能研究时
    先研究，依赖用户亲历时最多一次问三个关键问题，用户不许追问时缩小题目或缩短

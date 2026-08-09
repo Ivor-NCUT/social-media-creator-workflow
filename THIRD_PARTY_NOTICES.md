@@ -1,5 +1,19 @@
 # Third-party notices
 
+## mattpocock/skills collaborative writing
+
+- Project: [`mattpocock/skills`](https://github.com/mattpocock/skills)
+- Author: Matt Pocock
+- Integrated revision: `84fdeffd12f2ee307994d1eb6feb48173b6e0502`
+- Upstream license: MIT
+- Copyright: 2026 Matt Pocock
+- Adapted scope: fragment exploration, paragraph shaping, beat journeys, concept grounding, and
+  preservation of user edits during explicit collaborative writing
+
+The three source Skills remain in the upstream `in-progress` bucket. This repository adapts
+their transferable method inside the existing content-writer and keeps complete direct delivery
+as the default; it does not vendor their entry points or impose their file workflow globally.
+
 ## human-writing
 
 - Project: [`KKKKhazix/human-writing`](https://github.com/KKKKhazix/human-writing)

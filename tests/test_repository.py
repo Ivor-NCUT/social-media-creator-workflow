@@ -79,11 +79,22 @@ class RepositoryTest(unittest.TestCase):
             (ROOT / "tests" / "upstream_integration_cases.json").read_text(encoding="utf-8")
         )
         experts = {expert["id"] for expert in PROJECT["experts"]}
-        self.assertEqual(len(cases), 8)
-        self.assertEqual(len({case["source_family"] for case in cases}), 8)
+        self.assertEqual(len(cases), 9)
+        self.assertEqual(len({case["source_family"] for case in cases}), 9)
         self.assertTrue(
             all(case["expected"] in experts or case["expected"] == "router" for case in cases)
         )
+
+    def test_collaborative_writing_is_explicit_and_keeps_direct_delivery(self) -> None:
+        skill = (
+            ROOT / "skills" / "social-media-creator-workflow-content-writer" / "SKILL.md"
+        ).read_text(encoding="utf-8")
+        pack = (ROOT / "knowledge" / "skill-packs" / "content-writer.md").read_text(encoding="utf-8")
+        self.assertIn("只有用户明确要求", skill)
+        self.assertIn("## 协作共写", pack)
+        self.assertIn("普通“写一篇”“直接成稿”“给我", pack)
+        self.assertIn("Fragments（探索）", pack)
+        self.assertIn("Beats（旅程）", pack)
 
 
 if __name__ == "__main__":

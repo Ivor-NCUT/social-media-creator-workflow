@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.4.0 - 2026-08-09
+
+- Added an explicit collaborative writing mode inside the existing content-writer, adapting
+  fragments, shape, beats, concept grounding, and draft re-reading from `mattpocock/skills`.
+- Kept complete direct delivery as the default and added routing plus eval regressions for both
+  modes.
+- Recorded the exact MIT-licensed upstream revision without vendoring three in-progress entry
+  Skills.
+
 ## 1.3.0 - 2026-08-05
 
 - Integrated `KKKKhazix/human-writing` into the existing content writer with material sufficiency,

@@ -20,6 +20,10 @@
     "expected": "content-writer"
   },
   {
+    "prompt": "先探索这些零散想法，再和我一起打磨、逐段写成长文。",
+    "expected": "content-writer"
+  },
+  {
     "prompt": "把采访和简历写成一篇公众号候选人推荐信。",
     "expected": "content-writer"
   },

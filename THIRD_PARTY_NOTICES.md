@@ -1,5 +1,18 @@
 # Third-party notices
 
+## makerskills watch-video
+
+- Project: [`coreyhaines31/makerskills`](https://github.com/coreyhaines31/makerskills)
+- Author and copyright: Corey Haines, 2026
+- Integrated revision: `17218de201e94f7aebe8b0ddfb507175caf37343`
+- Upstream license: MIT
+- Adapted scope: choosing transcript, visual, or audiovisual inspection depth from the
+  downstream editing decision
+
+The integration keeps this method inside the existing rough-cut specialist. It does not vendor
+the upstream Skill, Claude-specific memory paths, browser assumptions, model fallbacks, or video
+runtime dependencies.
+
 ## mattpocock/skills collaborative writing
 
 - Project: [`mattpocock/skills`](https://github.com/mattpocock/skills)

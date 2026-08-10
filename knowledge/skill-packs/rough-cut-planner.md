@@ -1,6 +1,18 @@
 # Creator Rough Cut Planner knowledge pack
 
-依据 `creator-methods-collection-a` 蒸馏。
+依据 `creator-methods-collection-a` 蒸馏，并改编
+`coreyhaines31-makerskills-watch-video` 的分层媒体观察方法。
+
+## 最低够用的观察深度
+
+观察深度由下游剪辑决定，而不是由文件格式决定：
+
+- `transcript`：语言本身足以决定保留、删除和重排；
+- `visual`：镜头、动作、屏幕、道具、表情或场景也承担信息；
+- `audiovisual`：意义来自声音与画面的时序组合，拆开会误判。
+
+每次输出写明实际读取了哪些层、哪些层不可用。转写不能证明画面，离散关键帧不能
+证明连续动作；只有声画联合检查才能对反应、演示和时序笑点下判断。
 
 ## 粗剪优先级
 

@@ -1,7 +1,7 @@
 ---
 name: social-media-creator-workflow-rough-cut-planner
 description: |
-  Build the first coherent edit from raw footage while preserving the story and identifying missing material. Use when the user mentions: 粗剪, 素材筛选, 粗剪时间线, 整理素材.
+  Inspect only the media layers needed for editing, then build the first coherent cut while preserving the story and identifying missing material. Use when the user mentions: 粗剪, 素材筛选, 粗剪时间线, 整理素材, 分析视频素材, 提取关键画面.
 ---
 
 # Creator Rough Cut Planner
@@ -11,18 +11,25 @@ description: |
 
 ## Context
 
-先检查素材形式、时间码可靠性、目标时长、提纲与成稿，再完整读取
+先检查素材形式、可访问性、时间码可靠性、目标时长、提纲与成稿，再完整读取
 `../../knowledge/skill-packs/rough-cut-planner.md`。
 
 ## Workflow
 
-1. 建立素材清单，区分有准确时间码、估算时间码和无时间码素材。
-2. 用一句话确认故事主线和目标时长。
-3. 按“开头—推进—转折/证明—结果—结尾”排列核心片段。
-4. 标记保留、删除、缩短、重排、字幕补足和必须补拍。
-5. 重要位置保留备选片段，说明替换条件。
-6. 计算估算总时长；无可靠时间码时明确为顺序方案。
-7. 输出进入精剪前必须解决的问题。
+1. 建立素材清单，区分有准确时间码、估算时间码和无时间码素材；没有读取到的文件、
+   URL、画面或音轨明确标记为不可用。
+2. 按剪辑任务选择最低够用的观察深度：
+   - `transcript`：只需要判断口播、观点、故事和删改顺序时，提取带时间位置的语音内容；
+   - `visual`：镜头、动作、屏幕、道具、表情或场景承担信息时，在转写之外提取关键画面；
+   - `audiovisual`：笑点、反应、演示、环境声或声画错位决定意义时，联合判断声音与画面。
+3. 优先复用当前环境已安装的视频、音频、转写和图像能力；涉及网页访问时遵循当前
+   浏览器规则。某一深度缺少工具或权限时降级并记录覆盖缺口，不静默安装依赖。
+4. 用一句话确认故事主线和目标时长。
+5. 按“开头—推进—转折/证明—结果—结尾”排列核心片段。
+6. 标记保留、删除、缩短、重排、字幕补足和必须补拍。
+7. 重要位置保留备选片段，说明替换条件。
+8. 计算估算总时长；无可靠时间码时明确为顺序方案。
+9. 输出观察深度、素材覆盖缺口和进入精剪前必须解决的问题。
 
 ## Deliverables
 
@@ -36,6 +43,8 @@ description: |
 ## Boundaries
 
 - 不伪造帧级时间码，不假装预览了未提供的视频。
+- 只读到转写时不声称看过画面；只抽取关键帧时不声称理解了连续动作或声画关系。
+- 不因“更完整”默认选择成本更高的声画联合分析；下游剪辑判断不需要时停止在较浅层。
 - 不先做字幕样式、特效和复杂包装。
 - 不为节奏删除必要因果和证据。
 - 用户明确要求实际剪辑时，先确认可用视频工具与目标工程格式，再切换实施流程。

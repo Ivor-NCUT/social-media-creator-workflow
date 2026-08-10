@@ -79,8 +79,8 @@ class RepositoryTest(unittest.TestCase):
             (ROOT / "tests" / "upstream_integration_cases.json").read_text(encoding="utf-8")
         )
         experts = {expert["id"] for expert in PROJECT["experts"]}
-        self.assertEqual(len(cases), 9)
-        self.assertEqual(len({case["source_family"] for case in cases}), 9)
+        self.assertEqual(len(cases), 10)
+        self.assertEqual(len({case["source_family"] for case in cases}), 10)
         self.assertTrue(
             all(case["expected"] in experts or case["expected"] == "router" for case in cases)
         )
@@ -95,6 +95,18 @@ class RepositoryTest(unittest.TestCase):
         self.assertIn("普通“写一篇”“直接成稿”“给我", pack)
         self.assertIn("Fragments（探索）", pack)
         self.assertIn("Beats（旅程）", pack)
+
+    def test_video_analysis_depth_is_owned_by_rough_cut(self) -> None:
+        skill = (
+            ROOT / "skills" / "social-media-creator-workflow-rough-cut-planner" / "SKILL.md"
+        ).read_text(encoding="utf-8")
+        pack = (ROOT / "knowledge" / "skill-packs" / "rough-cut-planner.md").read_text(
+            encoding="utf-8"
+        )
+        for mode in ["transcript", "visual", "audiovisual"]:
+            self.assertIn(mode, skill)
+            self.assertIn(mode, pack)
+        self.assertIn("不声称看过画面", skill)
 
 
 if __name__ == "__main__":

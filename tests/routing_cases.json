@@ -32,6 +32,10 @@
     "expected": "rough-cut-planner"
   },
   {
+    "prompt": "分析视频素材，提取关键画面后给我粗剪建议。",
+    "expected": "rough-cut-planner"
+  },
+  {
     "prompt": "粗剪已定，请优化字幕包装和剪辑节奏。",
     "expected": "fine-cut-planner"
   },

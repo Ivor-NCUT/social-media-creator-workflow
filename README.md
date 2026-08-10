@@ -4,7 +4,7 @@
 
 ### 从一个选题，到一套会持续变聪明的内容生产系统
 
-![Version](https://img.shields.io/badge/version-1.4.0-16a34a?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.5.0-16a34a?style=for-the-badge)
 ![Workflow](https://img.shields.io/badge/workflow-22_experts-0f766e?style=for-the-badge)
 ![Skills](https://img.shields.io/badge/MOE-1_router_%2B_22_experts-2563eb?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-334155?style=for-the-badge)
@@ -86,7 +86,7 @@ SKILLS_HOME="$HOME/.agents/skills" node tools/install.mjs
 | 03 布场景 | `social-media-creator-workflow-scene-designer` | 场景表、镜头表、道具与转场 |
 | 04 引导拍摄 | `social-media-creator-workflow-shooting-director` | 拍摄顺序、逐镜提示、补拍清单 |
 | 05 出文章 | `social-media-creator-workflow-content-writer` | 口播稿、旁白、图文、文章或字幕稿 |
-| 06 粗剪 | `social-media-creator-workflow-rough-cut-planner` | 素材取舍、粗剪时间线、补拍点 |
+| 06 粗剪 | `social-media-creator-workflow-rough-cut-planner` | 按需读取口播、关键画面或声画关系，再做素材取舍、时间线与补拍点 |
 | 07 精剪 | `social-media-creator-workflow-fine-cut-planner` | 节奏、字幕、BGM、包装与导出标注 |
 | 08 审片 | `social-media-creator-workflow-content-reviewer` | 审核结论、问题优先级、回退工序 |
 | 09 多平台分发 | `social-media-creator-workflow-multiplatform-distributor` | 平台标题、封面、正文与关键词 |
@@ -132,6 +132,8 @@ MIT 许可证说明；具体见 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.m
 - 标题和开头承诺的价值必须在正文中兑现。
 - VLOG 检查真实、反差、交互和叙事主线。
 - 粗剪先解决故事与信息，精剪再处理字幕、音乐和包装。
+- 视频观察深度由剪辑问题决定：能靠转写解决就不做视觉分析，需要镜头信息才看关键
+  画面，只有声画时序影响意义时才做联合判断。
 - 单条数据不足以否定账号方向，策略结论必须带证据与置信度。
 - 单次偶然高数据先记录为待验证假设，不直接固化成成功公式。
 

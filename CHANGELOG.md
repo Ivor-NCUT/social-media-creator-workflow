@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.5.0 - 2026-08-10
+
+- Integrated purpose-fit transcript, visual, and audiovisual inspection into the existing
+  rough-cut specialist, adapting the transferable method from `coreyhaines31/makerskills`.
+- Kept the current router and expert count; no upstream Skill, host-specific browser, memory
+  path, model dependency, or video runtime was vendored.
+- Added source attribution plus routing and eval regressions for raw video and transcript-only
+  inputs.
+
 ## 1.4.0 - 2026-08-09
 
 - Added an explicit collaborative writing mode inside the existing content-writer, adapting

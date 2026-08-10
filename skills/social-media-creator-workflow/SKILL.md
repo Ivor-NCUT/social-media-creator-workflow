@@ -20,7 +20,7 @@ description: |
 | Creator Scene Designer | `social-media-creator-workflow-scene-designer` | Translate an outline into scenes, shots, props, actions, and visual information. | 布场景、镜头设计、拍摄场景、分镜 |
 | Creator Shooting Director | `social-media-creator-workflow-shooting-director` | Guide the creator through capturing complete, usable, and expressive footage. | 引导拍摄、拍摄指导、补拍清单、怎么拍 |
 | Creator Content Writer | `social-media-creator-workflow-content-writer` | Turn topics, outlines, interviews, and footage notes into scripts, narration, posts, public-account longform, candidate recommendation stories, or publishable articles. | 出文章、写口播稿、写旁白、写图文、公众号长文、候选人推荐信 |
-| Creator Rough Cut Planner | `social-media-creator-workflow-rough-cut-planner` | Build the first coherent edit from raw footage while preserving the story and identifying missing material. | 粗剪、素材筛选、粗剪时间线、整理素材 |
+| Creator Rough Cut Planner | `social-media-creator-workflow-rough-cut-planner` | Inspect only the media layers needed for editing, then build the first coherent cut while preserving the story and identifying missing material. | 粗剪、素材筛选、粗剪时间线、整理素材、分析视频素材、提取关键画面 |
 | Creator Fine Cut Planner | `social-media-creator-workflow-fine-cut-planner` | Specify pacing, captions, music, visual packaging, and export requirements after the rough cut is stable. | 精剪、字幕包装、BGM设计、剪辑节奏 |
 | Creator Content Reviewer | `social-media-creator-workflow-content-reviewer` | Review a finished or near-finished content piece and route revisions to the correct production stage. | 审片、内容审核、成片复查、发布前检查 |
 | Creator Multiplatform Distributor | `social-media-creator-workflow-multiplatform-distributor` | Adapt one content asset into platform-specific publishing packages without flattening platform differences. | 多平台分发、一稿多发、小红书适配、平台发布 |
@@ -60,6 +60,8 @@ description: |
   `shooting-director`。
 - 用户需要文字成稿时用 `content-writer`；需要从原始素材中决定保留和删除时用
   `rough-cut-planner`。
+- 用户给视频文件或链接，要为社媒剪辑提取口播、关键画面或声画关系时用
+  `rough-cut-planner`；已经有可靠转写、只需改写成稿时用 `content-writer`。
 - 公众号人物长文或候选人推荐信用 `content-writer` 的 Khazix 长文模式；招聘岗位传播
   仍用 `recruitment-human-ad`。
 - 故事顺序尚未稳定时用 `rough-cut-planner`；结构已稳定、要做字幕、音乐和包装

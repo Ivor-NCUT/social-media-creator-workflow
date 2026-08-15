@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.2 - 2026-08-15
+
+- Made `watch-video` visual review mandatory for macro-news final MP4s and required a persisted audiovisual-sync audit before package validation can pass.
+
 ## 1.6.1 - 2026-08-15
 
 - Switched macro-news narration to the external ListenHub Voice end-to-end audio workflow.

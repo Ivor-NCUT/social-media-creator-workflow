@@ -15,6 +15,7 @@
 └── video/
     ├── DESIGN.md
     ├── index.html
+    ├── listenhub-task.json
     ├── narration.wav
     ├── transcript.json
     ├── cover.png
@@ -25,8 +26,13 @@
 
 ```bash
 hyperframes init <video-dir> --non-interactive --example blank
-HYPERFRAMES_PYTHON="$HOME/.local/share/hyperframes/python/bin/python" \
-  hyperframes tts <script.txt> --voice <z_voice> --output <video-dir>/narration.wav
+
+# 先完整读取并调用已安装的 listenhub-voice Skill。当前 CLI 未暴露同名子命令时，
+# 按该 Skill 的 OpenAPI 异步契约提交、轮询到 success，并保存非敏感任务详情。
+# 下载结果后统一转为 HyperFrames 使用的 WAV：
+ffmpeg -i <listenhub-audio> -af loudnorm=I=-14:TP=-1:LRA=7 \
+  -ar 48000 -ac 2 <video-dir>/narration.wav -y
+
 HYPERFRAMES_PYTHON="$HOME/.local/share/hyperframes/python/bin/python" \
   hyperframes transcribe <video-dir>/narration.wav --model small --language zh --dir <video-dir>
 hyperframes lint <video-dir>
@@ -36,11 +42,17 @@ hyperframes render <video-dir> --output <video-dir>/final.mp4 --quality high
 ffmpeg -ss <cover_hero_second> -i <video-dir>/final.mp4 -frames:v 1 <video-dir>/cover.png -y
 ```
 
-先用 `hyperframes tts --list` 选择 `z` 开头的普通话声音。非英语语音不得用 `.en`
-转写模型。若 CLI 版本的参数与这里不同，以当前 `--help` 为准并把真实命令写入交付记录。
+ListenHub Voice 默认参数：`model=listenhub-voice-1.0`、单个中文旁白音色、`wav`、
+`durationHint=105`、关闭水印。只在用户明确要求时改成音效、克隆或多人对白。不要用
+`listenhub listenhub-voice --help` 的退出码判断子命令是否存在——未知命令也可能返回 0；
+应检查 `listenhub --help` 是否真实列出该子命令。当前未列出时，严格按已安装
+`listenhub-voice` Skill 的公开异步接口执行。
+
+非英语语音不得用 `.en` 转写模型。若 CLI 版本参数与这里不同，以当前 `--help` 为准并把
+真实命令写入交付记录。
 若上述 Python 不存在，用 `uv venv "$HOME/.local/share/hyperframes/python"` 创建一次，随后用
 `uv pip install --python "$HOME/.local/share/hyperframes/python/bin/python" openai-whisper kokoro-onnx soundfile`
-补齐共享运行时；不要在每个视频工程里重复安装。
+补齐共享转写运行时；不要在每个视频工程里重复安装。该环境只负责 Whisper，不负责生成旁白。
 
 ## DESIGN.md 最小视觉身份
 
@@ -72,10 +84,11 @@ ffmpeg -ss <cover_hero_second> -i <video-dir>/final.mp4 -frames:v 1 <video-dir>/
 
 ## 验收
 
-除 CLI 三项检查外，人工抽看 0–8 秒、每个章节英雄帧、结尾 10 秒和 cover.png：
+除 CLI 检查外，回读 `listenhub-task.json`，并人工抽听片头、中段、结尾，抽看 0–8 秒、
+每个章节英雄帧、结尾 10 秒和 cover.png：
 
 - 无错字、乱码、溢出、低对比与平台 UI 遮挡；
 - 封面结论与片中证据一致；
 - 画面不是逐字稿，数据与旁白时间对齐；
-- 音乐不盖人声，TTS 没有错误断句或数字读法；成片建议约 -14 LUFS，true peak 不高于
+- 音乐不盖人声，旁白没有错误断句或数字读法；成片建议约 -14 LUFS，true peak 不高于
   -1 dBTP。

@@ -112,9 +112,16 @@ class RepositoryTest(unittest.TestCase):
         skill = (
             ROOT / "skills" / "social-media-creator-workflow-macro-news-video" / "SKILL.md"
         ).read_text(encoding="utf-8")
-        for artifact in ["source-ledger.json", "storyboard.json", "video/final.mp4"]:
+        for artifact in [
+            "source-ledger.json",
+            "storyboard.json",
+            "video/listenhub-task.json",
+            "video/final.mp4",
+        ]:
             self.assertIn(artifact, skill)
         self.assertIn("hyperframes lint", skill)
+        self.assertIn("ListenHub-Voice-1.0", skill)
+        self.assertIn("不回退本地 TTS", skill)
         self.assertIn("不自动发布", skill)
 
 

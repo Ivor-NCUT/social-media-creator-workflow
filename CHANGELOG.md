@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.6.1 - 2026-08-15
+
+- Switched macro-news narration to the external ListenHub Voice end-to-end audio workflow.
+- Added the 1,400-character and 110-second service boundaries, authentication gates, and an
+  explicit rule against stitching multiple clips while claiming one continuous generation.
+- Kept HyperFrames responsible for transcription, captions, layout validation, and rendering.
+
 ## 1.6.0 - 2026-08-15
 
 - Added a macro-news-video specialist that turns one verified news item into a sourced vertical

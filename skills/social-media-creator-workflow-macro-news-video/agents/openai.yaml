@@ -1,0 +1,4 @@
+interface:
+  display_name: "全自动宏观热点解读视频生成"
+  short_description: "把一条宏观新闻自动变成可核验、可渲染的竖屏解读视频"
+  default_prompt: "请用 $social-media-creator-workflow-macro-news-video 核验这条宏观或产业新闻，自动生成有观点的竖屏解读视频，并交付封面、脚本、HyperFrames 工程和 MP4。"

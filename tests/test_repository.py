@@ -21,7 +21,7 @@ SKILL_NAME_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 class RepositoryTest(unittest.TestCase):
     def test_expected_expert_count_and_names(self) -> None:
         experts = PROJECT["experts"]
-        self.assertEqual(len(experts), 22)
+        self.assertEqual(len(experts), 23)
         ids = [expert["id"] for expert in experts]
         self.assertEqual(len(ids), len(set(ids)))
         self.assertTrue(all(SKILL_NAME_RE.fullmatch(expert_id) for expert_id in ids))
@@ -107,6 +107,15 @@ class RepositoryTest(unittest.TestCase):
             self.assertIn(mode, skill)
             self.assertIn(mode, pack)
         self.assertIn("不声称看过画面", skill)
+
+    def test_macro_news_video_owns_evidence_and_render_contract(self) -> None:
+        skill = (
+            ROOT / "skills" / "social-media-creator-workflow-macro-news-video" / "SKILL.md"
+        ).read_text(encoding="utf-8")
+        for artifact in ["source-ledger.json", "storyboard.json", "video/final.mp4"]:
+            self.assertIn(artifact, skill)
+        self.assertIn("hyperframes lint", skill)
+        self.assertIn("不自动发布", skill)
 
 
 if __name__ == "__main__":

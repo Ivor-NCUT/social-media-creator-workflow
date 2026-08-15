@@ -36,6 +36,7 @@ description: |
 | Open-source Launch Writer | `social-media-creator-workflow-open-source-launch` | Turn verified release facts into a cross-platform launch package. | 开源宣发、GitHub 发布宣传、项目发布 |
 | Creator Community Manager | `social-media-creator-workflow-community-manager` | Turn real social comments into natural, boundary-aware replies and pinned-comment options. | 评论回复、置顶评论、评论区运营、处理质疑 |
 | Creator Conversion Path | `social-media-creator-workflow-conversion-path` | Design an evidence-grounded path from content through profile, comments, messages, trial, booking, or purchase. | 转化路径、内容到私信、主页承接、私信筛选、内容成交 |
+| Macro News Video Producer | `social-media-creator-workflow-macro-news-video` | Turn one current macro or industry news item into a sourced Chinese vertical explainer and rendered HyperFrames video. | 全自动宏观热点解读视频、宏观新闻视频、新闻解读成片、HyperFrames 新闻视频 |
 
 ## Routing workflow
 
@@ -96,6 +97,8 @@ description: |
   发布日历时用 `topic-selector`。
 - 单独要小红书标题候选、评分或 A/B 包装时用 `multiplatform-distributor`；正文结构
   和事实尚未成立时先 `content-writer`，不能用标题替代内容。
+- 只要旁白或文章时用 `content-writer`；输入新闻并明确要自动完成核验、封面、分镜、
+  HyperFrames 工程和 MP4 时用 `macro-news-video`。
 
 ## Workflow feedback loops
 

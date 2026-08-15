@@ -396,6 +396,24 @@
         "评论和私信动作",
         "验证指标"
       ]
+    },
+    {
+      "id": "macro-news-video",
+      "name": "Macro News Video Producer",
+      "description": "Turn one current macro or industry news item into a sourced Chinese vertical explainer video and rendered HyperFrames deliverable.",
+      "triggers": [
+        "全自动宏观热点解读视频",
+        "宏观新闻视频",
+        "新闻解读成片",
+        "HyperFrames 新闻视频",
+        "输入新闻自动生成视频"
+      ],
+      "deliverables": [
+        "来源台账与切角",
+        "旁白与封面",
+        "HyperFrames 工程",
+        "竖屏 MP4 成片"
+      ]
     }
   ],
   "sources": [

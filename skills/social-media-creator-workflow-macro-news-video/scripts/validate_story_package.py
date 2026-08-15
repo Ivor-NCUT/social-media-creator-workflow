@@ -104,7 +104,7 @@ def validate(root: Path, stage: str, min_duration: float) -> list[str]:
                     raise ValueError
             except (TypeError, ValueError):
                 errors.append("video/listenhub-task.json: audio_duration must be positive")
-        for name in ("video/final.mp4", "video/cover.png"):
+        for name in ("video/watch-video-audit.md", "video/final.mp4", "video/cover.png"):
             path = root / name
             if not path.is_file() or path.stat().st_size < 1024:
                 errors.append(f"missing or implausibly small: {name}")

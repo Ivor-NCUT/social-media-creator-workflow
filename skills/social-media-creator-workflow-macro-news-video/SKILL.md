@@ -45,20 +45,24 @@ description: |
 6. **验收并渲染**：依次运行 `hyperframes lint`、`hyperframes check`，需要定位布局时再
    `inspect --json`；修完错误和非故意溢出后再 `render`。从已渲染视频的封面英雄时刻
    提取 `cover.png`。
-7. **检查交付**：运行 `python3 scripts/validate_story_package.py <job-dir> --stage final`，
+7. **视听复检**：渲染完成后必须调用 `watch-video` 的 visual 模式检查最终 MP4，使用
+   Whisper 实测时间戳逐段核对声音、字幕和场景语义；发现错位必须回到时间线修复并重新
+   渲染，不能用人工估算时间代替。将最终复检结论写入 `video/watch-video-audit.md`。
+8. **检查交付**：运行 `python3 scripts/validate_story_package.py <job-dir> --stage final`，
    返回 MP4、封面、完整稿、来源台账、工程路径和实际验证结果。
 
 ## 完成标准
 
 - `source-ledger.json`、`angle-brief.md`、`script.md`、`cover-brief.json`、
   `storyboard.json`、`video/DESIGN.md`、`video/index.html`、`video/listenhub-task.json`、
-  `video/final.mp4` 与 `video/cover.png` 全部存在。
+  `video/watch-video-audit.md`、`video/final.mp4` 与 `video/cover.png` 全部存在。
 - 片头前 8 秒同时交代新闻钉子、尺度或冲突；结尾回扣开头并给出判断，不用空泛
   “关注我”。
 - 旁白讲因果，画面讲结构，字幕只承担阅读辅助；三者不逐字重复。`narration.wav` 必须
   来自一次 ListenHub Voice 成功任务并保留任务 ID、时长和来源 URL 的非敏感记录。
 - 关键数字可由证据 ID 回查；推断与事实分开。
-- HyperFrames 的 lint、check 全部通过；成片能够播放，封面文字无乱码。
+- HyperFrames 的 lint、check 全部通过；`watch-video` 已复检声音、字幕和场景时间轴，
+  成片能够播放，封面文字无乱码。
 
 ## 边界
 

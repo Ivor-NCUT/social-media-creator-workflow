@@ -135,7 +135,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("job_dir", nargs="?", type=Path)
     parser.add_argument("--stage", choices=("brief", "composition", "final"), default="final")
-    parser.add_argument("--min-duration", type=float, default=180)
+    parser.add_argument("--min-duration", type=float, default=85)
     parser.add_argument("--self-test", action="store_true")
     args = parser.parse_args()
     if args.self_test:

@@ -98,5 +98,9 @@
   {
     "prompt": "设计内容到私信的转化路径。",
     "expected": "conversion-path"
+  },
+  {
+    "prompt": "输入新闻自动生成视频，用 HyperFrames 交付竖屏成片。",
+    "expected": "macro-news-video"
   }
 ]

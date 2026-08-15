@@ -1,5 +1,21 @@
 # Third-party notices
 
+## HyperFrames
+
+- Project: [`heygen-com/hyperframes`](https://github.com/heygen-com/hyperframes)
+- Integrated revision: `de4062a93300cbe1826edfbd8d71fbc44be25cb7`
+- Upstream license: Apache License 2.0
+- Use: invoked as an external plugin and CLI for HTML video authoring, validation, and rendering
+
+This repository does not vendor the HyperFrames runtime or plugin Skills. The macro-news-video
+specialist only defines a domain workflow and artifact contract around the installed dependency.
+
+## User-provided macro-news reference videos
+
+Five private reference videos and cover screenshots were analyzed on 2026-08-15. Their media,
+logos, transcripts, and distinctive copy are not redistributed. Only independently expressed
+structure, pacing, evidence, and cover heuristics are retained.
+
 ## makerskills watch-video
 
 - Project: [`coreyhaines31/makerskills`](https://github.com/coreyhaines31/makerskills)

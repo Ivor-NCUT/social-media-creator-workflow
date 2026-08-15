@@ -29,6 +29,7 @@
 - `social-media-creator-workflow-open-source-launch`: Produce a verified cross-platform open-source launch package.
 - `social-media-creator-workflow-community-manager`: Produce natural, boundary-aware replies and pinned comments from real community input.
 - `social-media-creator-workflow-conversion-path`: Design the evidence-grounded path from content to profile, message, trial, booking, or purchase.
+- `social-media-creator-workflow-macro-news-video`: Turn one current macro or industry news item into a sourced vertical explainer and rendered HyperFrames video.
 
 ## 责任边界
 
@@ -56,6 +57,8 @@ Skill 与对应的 `knowledge/skill-packs/`，避免路由器逐渐膨胀。
 - 具体评论回复或置顶 → 社区运营；评论区在完整业务路径中的职责 → 转化路径；
 - 简介、主页第一眼和置顶表达 → 账号体检；内容到主页、私信、体验或购买 → 转化路径；
 - 母题、栏目与长期选题库 → 账号定位；周期发布日历 → 定选题。
+- 单独文字结果 → 内容写作/提纲/封面等既有专家；一条新闻到核验、脚本、封面、分镜、
+  HyperFrames 工程和 MP4 的完整结果 → 宏观热点视频。
 
 ## human-writing 与小红书 AI 工作台冲突裁决
 

@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.6.0 - 2026-08-15
+
+- Added a macro-news-video specialist that turns one verified news item into a sourced vertical
+  explainer, cover, HyperFrames project, and rendered MP4.
+- Distilled structure and visual heuristics from five user-provided reference videos without
+  redistributing their media, branding, or copy.
+- Added a standard-library package validator, routing regression, source attribution, and
+  HyperFrames CLI quality gates.
+
 ## 1.5.0 - 2026-08-10
 
 - Integrated purpose-fit transcript, visual, and audiovisual inspection into the existing

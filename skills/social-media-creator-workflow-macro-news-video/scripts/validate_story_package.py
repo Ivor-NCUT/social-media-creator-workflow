@@ -93,6 +93,17 @@ def validate(root: Path, stage: str, min_duration: float) -> list[str]:
             if not (root / name).is_file():
                 errors.append(f"missing: {name}")
     if stage == "final":
+        receipt = load_json(root / "video/listenhub-task.json", errors)
+        if isinstance(receipt, dict):
+            if receipt.get("status") != "success":
+                errors.append("video/listenhub-task.json: status must be success")
+            if not receipt.get("task_id") or not receipt.get("audio_url"):
+                errors.append("video/listenhub-task.json: task_id and audio_url are required")
+            try:
+                if float(receipt.get("audio_duration", 0)) <= 0:
+                    raise ValueError
+            except (TypeError, ValueError):
+                errors.append("video/listenhub-task.json: audio_duration must be positive")
         for name in ("video/final.mp4", "video/cover.png"):
             path = root / name
             if not path.is_file() or path.stat().st_size < 1024:
@@ -145,4 +156,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

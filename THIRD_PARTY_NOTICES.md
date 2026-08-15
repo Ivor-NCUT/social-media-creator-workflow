@@ -1,5 +1,16 @@
 # Third-party notices
 
+## ListenHub Skills and ListenHub Voice
+
+- Project: [`marswaveai/skills`](https://github.com/marswaveai/skills)
+- Integrated revision: `b5d21f17a76800fb927b11923f1988b5eef39870`
+- Upstream license: MIT License
+- Use: invoke the installed `listenhub-voice` Skill and ListenHub service as the default
+  end-to-end narration dependency for macro-news videos
+
+This repository does not vendor the ListenHub CLI, credentials, generated audio, or service
+implementation. API availability, free periods, pricing, limits, and models remain external.
+
 ## HyperFrames
 
 - Project: [`heygen-com/hyperframes`](https://github.com/heygen-com/hyperframes)

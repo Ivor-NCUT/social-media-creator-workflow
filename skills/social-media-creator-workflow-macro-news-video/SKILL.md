@@ -31,15 +31,17 @@ description: |
 1. **定切角**：从表层事件向下追一层，寻找资源重配、成本转移、激励变化、供需错位或
    旧规则失效。用一句“大家在看 X，我更关心 Y”写入 `angle-brief.md`。
 2. **写脚本**：采用“新闻钉子 → 尺度翻译 → 反常识问题 → 机制拆解 → 利益相关者 →
-   判断回扣”。默认 3.5–5 分钟、1000–1400 个中文字符；按约 240–300 字/分钟校时，
-   每 20–35 秒给一个数字、对比、
+   判断回扣”。默认使用 ListenHub Voice 一次生成 85–110 秒的连贯旁白、约 450–650 个
+   中文字符；每 20–35 秒给一个数字、对比、
    改名或问题作为认知台阶。
 3. **做封面**：`cover-brief.json` 提供 3 个候选，只选 1 个生成。主标题 6–24 个非空白
    字符，写“结论或冲突”，不写“某新闻解读”；副标题补代价、机制或疑问。
 4. **做分镜**：`storyboard.json` 中每个场景只承担一个判断，绑定旁白和证据 ID；数字用
    对比、刻度、流向或前后变化呈现，不把长段旁白重新贴满屏幕。
-5. **建工程**：先写 `video/DESIGN.md`，再用 HyperFrames 创建 1080×1920 工程。生成中文
-   TTS、词级字幕、场景转场与封面英雄帧；所有时间线必须确定性、可 seek。
+5. **生成声音并建工程**：先调用已安装的 `listenhub-voice` Skill，用
+   `ListenHub-Voice-1.0` 将完整脚本一次生成连贯中文旁白；再写 `video/DESIGN.md`，用
+   HyperFrames 创建 1080×1920 工程并转写词级字幕、制作场景转场与封面英雄帧。所有
+   时间线必须确定性、可 seek。
 6. **验收并渲染**：依次运行 `hyperframes lint`、`hyperframes check`，需要定位布局时再
    `inspect --json`；修完错误和非故意溢出后再 `render`。从已渲染视频的封面英雄时刻
    提取 `cover.png`。
@@ -49,11 +51,12 @@ description: |
 ## 完成标准
 
 - `source-ledger.json`、`angle-brief.md`、`script.md`、`cover-brief.json`、
-  `storyboard.json`、`video/DESIGN.md`、`video/index.html`、`video/final.mp4` 与
-  `video/cover.png` 全部存在。
+  `storyboard.json`、`video/DESIGN.md`、`video/index.html`、`video/listenhub-task.json`、
+  `video/final.mp4` 与 `video/cover.png` 全部存在。
 - 片头前 8 秒同时交代新闻钉子、尺度或冲突；结尾回扣开头并给出判断，不用空泛
   “关注我”。
-- 旁白讲因果，画面讲结构，字幕只承担阅读辅助；三者不逐字重复。
+- 旁白讲因果，画面讲结构，字幕只承担阅读辅助；三者不逐字重复。`narration.wav` 必须
+  来自一次 ListenHub Voice 成功任务并保留任务 ID、时长和来源 URL 的非敏感记录。
 - 关键数字可由证据 ID 回查；推断与事实分开。
 - HyperFrames 的 lint、check 全部通过；成片能够播放，封面文字无乱码。
 
@@ -62,4 +65,7 @@ description: |
 - 不把“有争议”当流量捷径，不制造政策恐慌、投资建议或单因果结论。
 - 不因“全自动”跳过事实核验、版权边界、对真人的伤害检查或最终成片回看。
 - 不自动发布到平台；发布是独立授权动作。
-- 中文 TTS 不可用时保留完成的工程和文字资产，明确报告阻塞，不用英文声音冒充中文。
+- ListenHub Voice 文本最多 1400 字、`durationHint` 最多 110 秒。证据链超过单条容量时
+  拆成系列视频，不把多段音频拼接后冒充一次端到端生成。
+- ListenHub 未登录、缺少 OpenAPI Key、余额不足或任务失败时保留文字和工程，明确报告
+  阻塞；不回退本地 TTS，也不用英文声音冒充中文。

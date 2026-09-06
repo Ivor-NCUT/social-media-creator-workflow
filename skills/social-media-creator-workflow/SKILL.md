@@ -7,8 +7,8 @@ description: |
 # Social Media Creator Workflow
 
 这是创作者工作流的唯一主入口。先阅读当前对话、用户提供的素材和已有结果，
-再选择一个最匹配当前工序的专家。除非用户明确要求跑完整流程，否则一次只处理
-一个工序。
+再选择一个最匹配当前工序的专家。每次路由一个专家；专家结束后回到主路由，
+按用户目标继续必要且已授权的工序。目标满足后停止，不追加未请求的整套流程。
 
 ## Expert map
 
@@ -40,13 +40,16 @@ description: |
 
 ## Routing workflow
 
-1. 先读取 `knowledge/project-profile.md`，复用对话中已有的账号定位、受众、
+1. 先读取 `../../knowledge/project-profile.md`，复用对话中已有的账号定位、受众、
    IP、平台、商业目标和内容资产；不要让用户重复提供。
 2. 判断用户要的是“产生新内容”“加工已有内容”“评价现有内容”还是“从结果
    中学习”，再选择一个专家。
-3. 如果输入足以完成当前工序，直接执行；如果两条路会产生明显不同结果，最多
-   问一个决定性问题。
-4. 专家交付后，只说明最自然的下一步，不自动把整条流程跑完。
+3. 如果输入足以完成当前工序，直接执行。先复用已有决策并自行解决可逆的专业选择；
+   只有缺失关键业务信息、现有证据无法判定且会显著改变结果时才问一个决定性问题，
+   等待期间继续不依赖答案的工作。
+4. 专家交付后核对本次目标：未满足则继续必要且已授权的下一工序；单项目标已满足则结束。
+   发布、回复等外部动作先核对具体对象、内容和范围是否已有明确授权；未覆盖时先完成
+   可审阅成果，只暂停该外部动作，不重复确认已授权的工作。
 5. 用户明确指定工序时，以用户意图覆盖默认路由。
 
 ## Adjacent-stage tie breakers
@@ -112,7 +115,7 @@ description: |
 - Do not perform every specialist job inside this router.
 - Do not prescribe a fixed expert chain in advance.
 - Do not invent source-backed claims when the knowledge assets are incomplete.
-- Read `knowledge/sources.jsonl` before using imported domain material.
+- Read `../../knowledge/sources.jsonl` before using imported domain material.
 - 不替用户判断其是否“有资格”做企业主 IP。
 - AI 可以按用户要求完成头脑风暴、初稿、终稿或完整交付，不人为限制使用阶段。
 - 平台规则、流量比例、红利期和发布时间属于时效性观点；没有当前证据时标明来源

@@ -18,6 +18,24 @@
       "prompt": "这条成片的故事顺序没问题，我只想优化字幕、音乐和节奏。",
       "expected_output": "路由到 social-media-creator-workflow-fine-cut-planner，而不是粗剪或审片。",
       "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "账号资料和素材已给出，帮我完成账号定位，再选一条合适选题、出提纲并写成口播稿，直接交付。",
+      "expected_output": "依次按需要路由 positioning、topic-selector、outline-builder、content-writer；不在定位或选题专家结束时提前结束，不重复确认已明确范围；成稿验收后结束。",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "只帮我完成账号定位，这次不需要选题或成稿。",
+      "expected_output": "路由 positioning，定位完成并检查后结束，不追加选题、提纲或成稿。",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "请把成稿做成小红书和抖音分发包供我审核；我尚未决定在哪个账号发布。",
+      "expected_output": "完成 multiplatform-distributor 的可审阅分发包；不执行未授权发布，账号选择缺失不阻塞包装；只有需要实际发布时才询问具体账号与内容授权。",
+      "files": []
     }
   ]
 }

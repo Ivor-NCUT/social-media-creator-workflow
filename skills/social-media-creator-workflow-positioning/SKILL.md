@@ -7,7 +7,7 @@ description: |
 # Creator Positioning
 
 把创作者真实拥有的资源、想服务的人、经营目标和可持续供给，整理成可验证的账号定位。
-定位完成后停止，不替 `topic-selector` 批量展开具体选题。
+定位完成后返回主路由；若用户目标还包含选题，交给 `topic-selector` 继续，单项定位任务则结束。
 
 ## Context
 
